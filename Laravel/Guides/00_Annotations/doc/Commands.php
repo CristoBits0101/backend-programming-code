@@ -24,7 +24,7 @@
     */
     /*
         13 -> Create controller         : php artisan make:controller ControllerName
-        14 -> Create controller resource: php artisan make:controller PostController --resource
+        14 -> Create controller resource: php artisan make:controller NameController --resource
     */
     /*
         15 -> Create request validation : php artisan make:request NoteRequest
