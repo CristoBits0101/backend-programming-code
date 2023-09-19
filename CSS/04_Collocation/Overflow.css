@@ -1,0 +1,18 @@
+/* Oculta el texto de un párrafo que sobresale de un div */
+.contenedor-hidden {overflow: hidden;}
+
+/* Crea una barra de navegación vertical para el párrafo que sobresale de un div */
+.contenedor-scroll {overflow: scroll;}
+
+/* Hacer visible el contenido que se ocultó */
+.contenedor-visible {overflow: visible;}
+
+/* Optimiza el texto dentro del contenedor automáticamente */
+.contenedor-auto {overflow: auto;}
+
+/* Especifica como se comporta el texto que sobresale del div en x y */
+.contenedor-scroll-x 
+{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}

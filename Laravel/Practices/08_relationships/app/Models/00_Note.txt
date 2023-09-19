@@ -1,0 +1,14 @@
+- El modelo que tiene una clave foránea perecé al modelo que no la tiene, y el que no la tiene es proveedor del que la tiene.
+
+- Para las tablas de muchos a muchos recuerda que hace falta una tabla intermedia con las claves foráneas.
+
+- Reación de paso: Cuando accedemos a los datos de una tabla que no tiene nuestra clave foránea a través de una que sí la tiene.
+    - Podemos saber por ejemplo que targeta sim tiene asocia un telefono que tiene nuestra key.
+    - Aunque es una tabla intermediaria: User<->Phone"user_id"<->SIM"phone_id"
+    - Solo sirve en relaciones 1 to 1 y 1 to *
+
+- Reación polimórfica: No se sabe por ejemplo si la imagen se va a relacionar con un usuario o con un post.
+    - User<->Image<->Post: Esta relación polimórfica es 1 to 1 y 1 to *
+    - Post<->Tag<->Video: Esta relación polimórfica es * to *
+        - Aquí el tag no puede ser la etiqueta de paso necesitamos una más intermedia: taggables.
+

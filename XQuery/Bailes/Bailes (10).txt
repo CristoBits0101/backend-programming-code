@@ -1,0 +1,4 @@
+for $bailes in doc("bailes.xml")//bailes/baile
+let $nombre_baile:=$bailes/nombre
+where$bailes/profesor="Miriam Guitierrez" and $bailes/plazas<10
+return data ($nombre_baile)

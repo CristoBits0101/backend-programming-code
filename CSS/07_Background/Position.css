@@ -1,0 +1,25 @@
+/* Especifica la posición de la primera imagen */
+body 
+{
+    background-image: url(fondo.gif);
+    background-position: top center;
+    background-repeat: no-repeat; 
+}
+
+/* Medidas relativas */
+body 
+{
+    background-image: url(fondo.gif);
+    background-position: 150px 150px;
+    background-repeat: no-repeat; 
+}
+
+/* Responsive */
+body 
+{
+    background-image: url(imagen.gif);
+    background-position: 50% 50%;
+    background-repeat: no-repeat; 
+}
+   
+   

@@ -1,0 +1,59 @@
+<?php
+require_once 'bd.php';
+/* formulario de login habitual
+  si va bien abre sesión, guarda el nombre de usuario y redirige a principal.php
+  si va mal, mensaje de error */
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $usu = comprobar_usuario($_POST['usuario'], $_POST['clave']);
+    if ($usu === false) {
+        $err = true;
+        $usuario = $_POST['usuario'];
+    } else {
+        session_start();
+        // $usu tiene campos correo y codRes, correo 
+        $_SESSION['usuario'] = $_POST['usuario'];
+        $_SESSION['carrito'] = [];
+        header("Location: principal.php");
+        return;
+    }
+}
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario de login</title>
+        <meta charset = "UTF-8">
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">			
+    </head>	
+    <body>
+        <?php
+        if (isset($_GET["redirigido"])) {
+            echo "<p>Haga login para continuar</p>";
+        }
+        ?>
+        <?php
+        if (isset($err) and $err == true) {
+            echo "<p> Revise usuario y contraseña</p>";
+        }
+        ?>
+        <div class="container-fluid">
+            <div class="col-md-4 order-md-1">
+                <h4>Librería</h4>
+                <section id = "login">
+                    <form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method = "POST">
+                        <div class="form-group">
+                            <label for="usuario">Usuario</label>
+                            <input class="form-control" id = "usuario" name = "usuario" type = "text">			
+                            <label for="clave">Clave</label>
+                            <input class="form-control" id = "clave" name = "clave" type = "password">					
+
+                        </div>
+                        <input class="btn btn-primary btn-lg" value="Iniciar Sesión" type = "submit">
+                    </form>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

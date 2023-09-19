@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <input type="button" id="brnEnviar" value="1"/>
+    <input type="button" id="brnEnviar" value="3"/>
+    <input type="button" id="brnEnviar" value="4"/>
+
+    <button type="button" id="btnCount">4</button>
+    <button type="button" id="btnCount" onclick="deshabilitar()" ">Deshabilitar</button>
+
+    <script>
+
+        function deshabilitar() 
+        {
+            var button = document.getElementsByTagName('button');
+
+            for (var i = 0; i < button.length; i++)
+            {
+                button[i].disabled = true;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!-- File -->
+<p>
+    <!-- Empaquetando aplicación anfitriona -->
+    create a Dockerfile
+
+    <!-- Parámetros -->
+    FROM program_name:version
+
+    RUN mkdir -p /path/where/the/container/code/will/be
+
+    COPY . /program/path/on/the/host/machine
+
+    EXPOSE 0000 (Port to connect to the app from the host)
+
+    CMD ["program_name", "/path/where/the/container/code/will/be"]
+    
+    <!-- 
+        - Comunicar contenedores mapeándolos en una red la ip del contenedor es su nombre.
+        - Si por ejemplo quieres comunicar php con mysql tendrías que poner la ip de mysql en php.
+    -->
+</p>

@@ -1,0 +1,60 @@
+<ol>
+    <!-- PRIMARY KEY -->
+    <li>
+        CREATE TABLE IF NOT EXISTS nombre_tabla (
+            id SERIAL,
+            dni VARCHAR(9) PRIMARY KEY NOT NULL,
+            nombre VARCHAR(30) NOT NULL,
+            email VARCHAR(100) UNIQUE NOT NULL,
+            salary NUMERIC(9.2) CHECK (salary > 0)
+        );
+    </li>
+    <!-- CONSTRAINT PRIMARY KEY -->
+    <li>
+        CREATE TABLE IF NOT EXISTS schema.nombre_tabla (
+            id SERIAL,
+            nombre VARCHAR(30) NOT NULL,
+            CONSTRAINT pk_manufacturer PRIMARY KEY(id)
+        );
+    </li>
+    <!-- CONSTRAINT FOREIGN KEY REFERENCES -->
+    <li>
+        CREATE TABLE IF NOT EXISTS model (
+            id SERIAL,
+            nombre VARCHAR(30) NOT NULL,
+            id_manufacturer INT,
+            CONSTRAINT pk_model PRIMARY KEY(id),
+            CONSTRAINT fk_model_manufacturer FOREIGN KEY(id_manufacturer) REFERENCES manufacturer(id)
+        );
+    </li>
+    <!-- ON UPDATE, ON DELETE -->
+    <li>
+        CREATE TABLE IF NOT EXISTS version (
+            id SERIAL,
+            price VARCHAR(30) NOT NULL,
+            id_model INT,
+            CONSTRAINT pk_version PRIMARY KEY(id),
+            CONSTRAINT fk_version_model FOREIGN KEY(id_model) REFERENCES manufacturer(id) 
+            ON UPDATE CASCADE ON DELETE CASCADE
+            -- OR...
+            ON UPDATE SET NULL ON DELETE SET NULL
+            -- OR...
+            ON UPDATE SET DEFAULT ON DELETE SET DEFAULT
+            -- OR...
+            ON UPDATE NULL ON DELETE CASCADE
+        );
+    </li>
+    <!-- 2 CONSTRAINT FOREIGN KEY REFERENCES -->
+    <li>
+        CREATE TABLE IF NOT EXISTS extra_version (
+            id_version INT,
+            id_extra INT,
+            price NUMERIC NOT NULL CHECK (price >= 0),
+            CONSTRAINT pk_extra_version PRIMARY KEY(id_version, id extra),
+            CONSTRAINT fk_version_extra FOREIGN KEY(id_version) REFERENCES version(id) 
+            ON UPDATE CASCADE ON DELETE CASCADE
+            CONSTRAINT fk_extra_version FOREIGN KEY(id_extra) REFERENCES extra(id) 
+            ON UPDATE CASCADE ON DELETE CASCADE
+        );
+    </li>
+</ol>

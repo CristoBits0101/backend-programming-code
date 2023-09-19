@@ -1,0 +1,21 @@
+P 
+{
+    Text-decoration: none;          /* Sin estilos                      */
+    text-decoration: underline;     /* Subrayado                        */
+    text-decoration: overline;      /* Suprarrayado                     */
+    text-decoration: line-through;  /* Tachado                          */
+    text-decoration: blink;         /* Blink                            */
+    text-decoration: inherit;       /* Texto heredado                   */
+
+    Text-transform: uppercase;      /* Mayúsculas                       */
+    Text-transform: lowercase;      /* Minúsculas                       */
+    text-transform: capitalize;     /* Primera letra mayúsculas         */
+
+    Line-height: 1.4em;             /* Distancia entre líneas de texto  */
+
+    Text-indent: 1.2px;             /* Sangra la primera línea          */
+    
+    Letter-spacing: 2px;            /* Espacio entre letras             */
+    
+    white-space:0;                  /* Gestiona los espacios en blanco  */
+}

@@ -1,0 +1,23 @@
+<script type = "text/javascript">
+    
+    var xhttp = new XMLHttpRequest();
+    
+    // 1. Cuando se obtenga una respues del servidor se verifica.
+    xhttp.onreadystatechange = function ()
+    {
+        if (this.readyState == 4 && this.status == 200)
+        {
+            alert(this.response);
+        }
+    };
+
+    xhttp.open("GET", "hora_servidor.php?param1=value1", true);
+
+    xhttp.send();
+
+    for($i = 0; $i < 1000; $i++)
+    {
+        console.log("Haciendo cosas mientras espero la peticion..");
+    }
+
+</script>

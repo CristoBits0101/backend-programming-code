@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+	<p></p>
+
+	<select id="Choose" onchange="Func_a()">
+		<option value="--">--
+		<option value="Apple">Apple
+		<option value="Guava">Guava
+		<option value="Pineapple">Pineapple
+	</select>
+
+	<p></p>
+
+	<p id="demo1"></p>
+
+	Name <input type="txt" id="Inpt_Val" value="Ana" onchange="Func_b()"/>
+
+	surname <input type="txt" id="Inpt_Val" value="Ana" oninput="Func_c()"/>
+
+	<button id="btnselectedIndex" onclick="Func_d()">
+		Seleccionar elemento 3
+	</button>
+
+	<script>
+
+		function Func_a() 
+		{
+			var x_ip = document.getElementById("Choose").value;
+
+			document.getElementById("demo1").innerHTML = "Seleccionaste " + x_ip;
+		}
+
+
+		function Func_b() 
+		{
+			alert('jose no cambies');
+		}
+
+
+		function Func_c() 
+		{
+			alert('nooooo');
+		}
+
+
+		function Func_d() 
+		{
+			var select = document.getElementById("Choose");
+
+			select.options.selectedIndex = 3;
+		}
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+/*
+    - Todos los elementos traen unas propiedades y valores predefinidas.
+    - Si no quieres estas propiedades hay que indicarlo dentro de los bloques.
+*/
+
+body 
+{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+ol 
+{
+    list-style: none;
+}

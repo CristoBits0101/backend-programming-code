@@ -1,0 +1,280 @@
+<!-- Con esta etiqueta indicamos al navegador que el códigos y formato del texto es de tipo HTML -->
+<!DOCTYPE html>
+<!-- Esta etiqueta indica que HTML está escrito con el lenguaje español html + lang(es) -->
+<html lang="es">
+<!-- Esta etiqueta solo contendrá información para el navegador web no será visible para el usuario -->
+<head>
+    <!-- Esta etiqueta indica que el código de codificación para caracteres será el de UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Esta etiqueta se usa para la compatibilidad con internet Explorer dando información de comportamiento -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Esta etiqueta indica la escala y el ancho inicial del sitio web -->
+    <meta name="viewport" content="width=º, initial-scale=1.0">
+    <!-- Esta etiqueta asignará el texto que escribanos a la pestaña del navegador -->
+    <title>Lost World Park ES</title>
+    <!-- La etiqueta link enlazará la hoja de estilos con el atributo indicado que serán estilos y la ruta del documento -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<!-- En esta etiqueta va el contenido visible que interactuara con el usuario del sitio web -->
+<body>
+    <!-- Esta etiqueta será usada para dividir la cabecera y el menú del contenido del cuerpo -->
+    <div id="container">
+        <!-- La etiqueta header contendrá la cabecera del sitio web -->
+        <!-- Dispondrá del logo de la página web, enlaces a redes sociales, idiomas opcionales y menú de registro -->
+        <!-- El menú de registro contendrá la segunda página web que requiere el proyecto -->
+        <!-- Se introducirá todas las etiquetas h1 - h6 para que la web sea semántica -->
+        <header>
+            <!-- Etiqueta semántica y título del sitio web que sirve para dar información al motor de búsqueda y posicionar -->
+            <div id="divHeader1"><marquee behavior="scroll" direction="right"><h1>Lost World Park ES</h1></marquee></div>
+            <div id="divHeader2">
+                <form action="">
+                    <label for="buscar"></label>
+                    <input id="buscar" type="search" placeholder="¡Encuentra información de manera rápida!, escribe y dale a buscar.">
+                    <button><b>BUSCAR</b></button>
+                </form>
+            </div>
+            <div id="divHeader4">
+                <a href=""><img class="imagenIdioma" src="image/es.png"  alt="error" title="Español" ></a>
+                <a href=""><img class="imagenIdioma" src="image/en.png"  alt="error" title="English" ></a>
+                <a href=""><img class="imagenIdioma" src="image/fr.png"  alt="error" title="Français"></a>
+                <a href=""><img class="imagenIdioma" src="image/ger.png" alt="error" title="Deutsch" ></a>
+            </div>
+            <div id="divHeader3">
+                    <button><a href="pages/login.html" target="_blank"><b>ENTRAR</b></a></button>
+                    <button><a href="pages/registration.html" target="_blank"><b>REGISTRARSE</b></a></button>
+            </div>
+        </header>
+        <!-- La etiqueta nav contendrá la barra de menú de navegación con iconos y texto -->
+        <!-- Se ha creado una lista desordenada que contendrá los elementos del menú tanto iconos como descripción -->
+        <!-- Se dispondrá de los 3 tipos de enlaces (id, interno a otra página y externo) -->
+        <!-- Las animaciones serán explicadas en css -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://www.google.com">
+                        <ul>
+                            <li><img src="image/1.png" alt=""></li>
+                            <li><b>EVENTOS</b></li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com">
+                        <ul>
+                            <li><img src="image/2.png" alt=""></li>
+                            <li><b>ATRACCIONES</b></li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com">
+                        <ul>
+                            <li><img src="image/3.png" alt=""></li>
+                            <li><b>CALENDARIO</b></li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com">
+                        <ul>
+                            <li><img src="image/4.png" alt=""></li>
+                            <li><b>ENTRADAS</b></li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com">
+                        <ul>
+                            <li><img src="image/5.png" alt=""></li>
+                            <li><b>HOTELES</b></li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com">
+                        <ul>
+                            <li><img src="image/6.png" alt=""></li>
+                            <li><b>RESTAURANTES</b></li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com">
+                        <ul>
+                            <li><img src="image/7.png" alt=""></li>
+                            <li><b>TIENDAS</b></li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Esta será la sección del cuerpo que contenga los artículos -->
+    <section>
+        <article>
+            <h3 id="texto1">¡Nuevas zonas de ocio y diversión!</h2>
+            <p id="texto2">Después de un año de la inauguración de las atracciones de adrenalina y las atracciones 4D tematizadas hemos decidido abrir más zonas para cuando las atracciones principales estén cerradas y los días de eventos estéis a la espera de inicio podáis pasar un tiempo de desconexión, para la apertura de la recreación de Howard a escala real aún falta un poco de tiempo no desesperéis será más temprano de lo que pensáis.</p>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                    <img src="image/8.jpg" style="width:100%">
+                <div class="text">Zona de Recreativos</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                    <img src="image/9.jpg" style="width:100%">
+                <div class="text">Campo de Airsoft</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                    <img src="image/10.jpg" style="width:100%">
+                <div class="text">Zoológico de Dinosaurios</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                    <img src="image/11.jpg" style="width:100%">
+                <div class="text">Eventos de Cosplay</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                    <img src="image/12.jpg" style="width:100%">
+                <div class="text">Restaurantes Temáticos</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                    <img src="image/13.jpg" style="width:100%">
+                <div class="text">Tiendas de Cómic y Manga</div>
+            </div>
+            <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </article>
+        <div id="map">
+            <h3 id="textMapH3" >¡No te pierdas nada!</h3>
+            <p id="textMap">Haz clic en el mapa de debajo y podrás ver un mapa 3D detallado del parque en el que se te mostrara las calles, atajos, eventos activos, decoración, recomendaciones, tiendas físicas y muchos más.</p>
+            <img id="imgMap" src="image/parkMap.jpg" usemap="#image-map">
+            <map name="image-map">
+                <area target="_blank" alt="sdfasdf" title="sdfasdf" href="https://www.google.es/?gfe_rd=cr&amp;ei=hzQpVKj5DI-t8wer7YHABQ&amp;gws_rd=ssl" coords="159,140,99" shape="circle">
+                <area target="_blank" alt="sdfasfasf" title="sdfasfasf" href="https://www.google.es/?gfe_rd=cr&amp;ei=hzQpVKj5DI-t8wer7YHABQ&amp;gws_rd=ssl" coords="315,250,84" shape="circle">
+                <area target="_blank" alt="sadfasf" title="sadfasf" href="https://www.google.es/?gfe_rd=cr&amp;ei=hzQpVKj5DI-t8wer7YHABQ&amp;gws_rd=ssl" coords="501,133,128" shape="circle">
+                <area target="_blank" alt="asfasfasf" title="asfasfasf" href="https://www.google.es/?gfe_rd=cr&amp;ei=hzQpVKj5DI-t8wer7YHABQ&amp;gws_rd=ssl" coords="784,125,129" shape="circle">
+                <area target="_blank" alt="asfasf" title="asfasf" href="https://www.google.es/?gfe_rd=cr&amp;ei=hzQpVKj5DI-t8wer7YHABQ&amp;gws_rd=ssl" coords="711,316,481,437" shape="rect">
+                <area target="_blank" alt="afasffas" title="afasffas" href="https://www.google.es/?gfe_rd=cr&amp;ei=hzQpVKj5DI-t8wer7YHABQ&amp;gws_rd=ssl" coords="328,346,466,430" shape="rect">
+                <area target="_blank" alt="dsgsdf" title="dsgsdf" href="https://www.google.es/?gfe_rd=cr&amp;ei=hzQpVKj5DI-t8wer7YHABQ&amp;gws_rd=ssl" coords="867,259,723,360" shape="rect">
+                <area target="_blank" alt="sdasda" title="sdasda" href="https://www.google.es/?gfe_rd=cr&amp;ei=hzQpVKj5DI-t8wer7YHABQ&amp;gws_rd=ssl" coords="984,252,879,422" shape="rect">
+            </map>
+        </div>
+    </section>
+    <!-- Un contenedor lateral que contendrá la publicidad del sitio web -->
+    <aside>
+        <h3 id="redesSocialesTitulo">Síguenos en nuestras redes sociales.</h3>
+        <div id="redesSociales">
+            <img title="Facebook" class="imagenes" src="image/facebook.png" alt=""><img title="Twitter" class="imagenes" src="image/twitter.png" alt=""><img title="instagram" class="imagenes" src="image/instagram.png" alt=""><img title="Youtube" class="imagenes" src="image/youtube.png" alt="">
+        </div>
+        <h3>Escucha nuestro podcast.</h3>
+        <audio src="music/ES_Dark Utopia - FormantX.mp3" controls autoplay></audio>
+        <h3>Horarios del parque.</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>L</td>
+                    <td>M</td>
+                    <td>M</td>
+                    <td>J</td>
+                    <td>V</td>
+                    <td>S</td>
+                    <td>D</td>
+                </tr>
+                <tr>
+                    <td>Desde:</td>
+                    <td colspan="2">10:00 a.m</td>
+                    <td rowspan="2">Cerrado</td>
+                    <td colspan="4">9:00 a.m</td>
+                </tr>
+                <tr>
+                    <td>Hasta:</td>
+                    <td colspan="2">18:00 p.m</td>
+                    <td colspan="4">22:00 p.m</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Medidas de seguridad obligatorias.</h3>
+        <div class="publicidad">
+            <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/home.htm" target="_blank"><img src="image/covid-19.png" alt=""></a>
+        </div>
+        <h3>Descarga nuestra app móvil.</h3>
+        <div class="publicidad">
+            <a href="https://play.google.com/store?hl=es&gl=US" target="_blank"><img src="image/APP.png" alt=""></a>
+        </div>
+        <div class="publicidad"></div>
+    </aside>
+    <footer>
+        <div class="footer">
+            <ul>
+                <li class=""><a href="#">Home</a></li>
+                <li class=""><a href="#">Services</a></li>
+                <li class=""><a href="#">About</a></li>
+                <li class=""><a href="#">Terms</a></li>
+                <li class=""><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        var slideIndex = 0;
+        carrusel();
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            //slideIndex++;
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+        function carrusel() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(carrusel, 4000); 
+        }
+    </script>
+</body>
+</html>

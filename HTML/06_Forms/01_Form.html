@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- T Í T U L O -->
+    <title>Supuesto Práctico UT2</title>
+
+    <!-- E S T I L O S -->
+    <link rel="stylesheet" href="./styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <!-- C O N T E N E D O R -->
+    <div class="container">
+        
+        <!-- A L U M N O -->
+        <h2>
+            Cristo Rubén Pérez Suárez
+        </h2>
+
+        <!-- F O R M U L A R I O -->
+        <form action="../src/01_main-execution.php" method="post" enctype="multipart/form-data">
+
+            <!-- N O M B R E -->
+            <div>
+                <label for="nombre">
+                    Nombre:
+                </label>
+                <input type="text" id="nombre" name="nombre" minlength="3" maxlength="8" size="10" placeholder="Cristo Rubén" />
+            </div>
+
+            <br/>
+
+            <!-- A P E L L I D O S -->
+            <div>
+                <label for="apellidos">
+                    Apellidos:
+                </label>
+                <input type="text" id="apellidos" name="apellidos" minlength="4" maxlength="8" size="10" placeholder="Pérez Suárez" />
+            </div>
+
+            <br/>
+
+            <!-- T E L É F O N O -->
+            <div>
+                <label for="telefono">
+                    Teléfono:
+                </label>
+                <input type="tel" id="telefono" name="telefono" placeholder="928 11 08 11" />
+            </div>
+
+            <br/>
+
+            <!-- E M A I L -->
+            <div>
+                <label for="correo">
+                    Correo electrónico:
+                </label>
+                <input type="email" id="correo" name="correo" size="32" maxlength="256" list="defaultCorreo" placeholder="user@example.gov" multiple required />
+            </div>
+
+            <br/>
+
+            <!-- C O N T R A S E Ñ A 1 -->
+            <div>
+                <label for="contrasena1">Contraseña:</label>
+                <input
+                    type="password"
+                    minlength="1"
+                    maxlength="30"
+                    name="contrasena1"
+                    id="contrasena1"
+                >
+            </div>
+
+            <br/>
+
+            <!-- C O N T R A S E Ñ A 2 -->
+            <div>
+                <label for="contrasena2">Repita contraseña:</label>
+                <input
+                    type="password"
+                    minlength="1"
+                    maxlength="30"
+                    name="contrasena2"
+                    id="contrasena2"
+                >
+            </div>
+
+            <br/>
+
+            <!-- S E L E C T -->
+            <div>
+                <label for="idioma">Idioma:</label>
+                <select name="idioma" id="idioma">
+                    <option value="es" selected>Español</option>
+                    <option value="en">Inglés</option>
+                </select>
+            </div>
+
+            <br/>
+
+            <!-- R A D I O -->
+            <fieldset>
+                <legend>
+                    Selecciona la visibilidad
+                </legend>
+                <div>
+                    <input type="radio" name="visibilidad" value="publico" checked />
+                    <label for="publico">
+                        Público
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="visibilidad" value="privado" />
+                    <label for="privado">
+                        Privado
+                    </label>
+                </div>
+            </fieldset>
+
+            <br/>
+
+            <!-- C H E C K B O X -->
+            <div>
+                <div>
+                    <input type="checkbox" name="tematica[]" value="administracion">
+                    <label for="privado">
+                        Administración
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="tematica[]" value="finanzas">
+                    <label for="privado">
+                        Finanzas
+                    </label>
+                </div>
+            </div>
+
+            <br/>
+
+            <!-- F I C H E R O 1 -->
+            <div>
+                <input type="file" name="fichero1" accept=".txt,.pdf,.docx,.xlsx,.pptx,.odt" >
+            </div>
+
+            <br/>
+
+            <!-- F I C H E R O 2 -->
+            <div>
+                <input type="file" name="fichero2" accept=".txt,.pdf,.docx,.xlsx,.pptx,.odt" >
+            </div>
+
+            <br/>
+
+            <!-- F O T O -->
+            <div>
+                <input type="file" name="foto" accept=".jpg,.gif,.png" />
+            </div>
+
+            <br/>
+
+            <!-- T E X T A R E A -->
+            <div>
+                <label for="descripcion">Descripción de documentos:</label>
+                <textarea type="text" name="descripcion" id="descripcion" cols="30" rows="3"></textarea>
+            </div>
+
+            <br/>
+
+            <!-- B O T O N E S -->
+            <div id="botones">
+                <button type="reset">
+                    Reiniciar
+                </button>
+                <button type="submit">
+                    Enviar
+                </button>
+            </div>
+
+            <!-- V E R I F I C A R -->
+            <input type="hidden" id="formulario" name="formulario" value="sput2" />
+
+        </form>
+        
+        <br/>
+
+    </div>
+
+</body>
+
+</html>

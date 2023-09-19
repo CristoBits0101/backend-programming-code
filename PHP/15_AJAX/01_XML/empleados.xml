@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<departamento nombre="Marketing" jefeDep="e101">
+    <empleado codEmple="e101">
+        <nombre>Ana</nombre>
+        <apellidos>Pérez Santana</apellidos>
+        <edad>28</edad>
+         <carnetConducir></carnetConducir>
+    </empleado>
+    <empleado codEmple="e102">
+        <nombre>Antonio</nombre>
+        <apellidos>Miguel García</apellidos>
+        <edad>32</edad>
+        <carnetConducir></carnetConducir>
+    </empleado>
+</departamento>

@@ -1,0 +1,11 @@
+<!-- PowerShell -->
+<p>
+    <!-- 
+        - Comunicar contenedores mapeándolos en una red la ip del contenedor es su nombre.
+        - Si por ejemplo quieres comunicar php con mysql tendrías que poner la ip de mysql en php.
+    -->
+
+    <!-- Vincular un contenedor a una red -->
+    docker create -p(HostPortNumber):(ContainerPortNumber) --name program_name
+    --network mired -e environment_variable=value program_name
+</p>

@@ -1,0 +1,19 @@
+body 
+{
+    background: url(fondo.gif) fixed top center no-repeat; 
+}
+
+div.cabecera 
+{
+    background: repeat-x url(fondo.gif) red; 
+}
+
+p 
+{
+    background: #ccc; 
+}
+
+#contenido span.imagen 
+{
+    background: url("imagenes/imagen.gif") 0 50% no-repeat; 
+}

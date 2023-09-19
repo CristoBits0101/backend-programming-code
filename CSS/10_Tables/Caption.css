@@ -1,0 +1,5 @@
+/* Valores posibles: top, bottom, left y right */
+#títuloTabla 
+{
+ caption-side: bottom; /* Título de tabla debajo */
+}

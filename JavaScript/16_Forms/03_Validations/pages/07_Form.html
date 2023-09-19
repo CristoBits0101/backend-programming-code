@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form validation</title>
+
+    <script>
+        
+        // 1. Se activa al enviar el formulario.
+        function validateForm() 
+        {
+            // Almacena los valores de los names.
+            var name       = document.contactForm.name.value;
+            var email      = document.contactForm.email.value;
+            var mobile     = document.contactForm.mobile.value;
+            var country    = document.contactForm.country.value;
+            var gender     = document.contactForm.gender.value;
+            var hobbies    = [];
+            var checkboxes = document.getElementsByName("hobbies[]");
+
+            // Añade los checkboxes chequeados.
+            for(var i=0; i < checkboxes.length; i++) 
+            {
+                if(checkboxes[i].checked)
+                {
+                    hobbies.push(checkboxes[i].value);
+                }
+            }
+        
+            //https://www.w3schools.com/jsref/jsref_regexp_ncaret.asp
+            var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
+
+            /**
+             *  - Validar el nombre.
+             *  - Si el nombre está vacío, ejecuta la función printError.
+             *  - La función recibe como parámetros el id del input y el mensaje que imprime.
+             */
+            if(name == "") 
+            {
+                printError("nameErr", "Please enter name");
+            } 
+            
+            /**
+             *  - Si el input no está vacío.
+             *  - Se almacena un expresión regular en la variable.
+             *  - Luego se le aplica la función test a la expresión pasándole como parámetro el name.
+             *  - Si no pasa el test el name imprimimos ejecutamos la función que dispara el error otra vez.
+             */
+            else 
+            {
+                var regex = /^[a-zA-Z\s]+$/; //The ^n quantifier matches any string \s whitespace
+
+                if (regex.test(name) === false) 
+                {
+                    printError("nameErr", "Enter valid name");
+                } 
+                
+                else 
+                { 
+                    printError("nameErr", "");
+                    
+                    nameErr = false;
+                }
+            }
+        
+            // Validar el email.
+            if(email == "") 
+            {
+                printError("emailErr", "Enter your email");
+            } 
+
+            else 
+            {
+                var regex = /^\S+@\S+\.\S+$/;// \S non-whitespace
+                
+                if(regex.test(email) === false) 
+                {
+                    printError("emailErr", "Please enter a valid email");
+                } 
+                
+                else
+                {
+                    printError("emailErr", "");
+                    
+                    emailErr = false;
+                }
+            }
+        
+            // Valida el teléfono.
+            if(mobile == "") 
+            {
+                printError("mobileErr", "Please enter mobile number");
+            } 
+            
+            else 
+            {
+                // Matches digits.
+                var regex = /^[1-9]\d{9}$/; 
+                    
+                if(regex.test(mobile) === false) 
+                {
+                    printError("mobileErr", "Please enter a valid mobile number");
+                } 
+                
+                else
+                {
+                    printError("mobileErr", "");
+                    
+                    mobileErr = false;
+                }
+            }
+
+            // Valida el país.
+            if (country == "Select") 
+            {
+                printError("countryErr", "Please select country"); 
+            }
+
+            else 
+            {
+                printError("countryErr", ""); countryErr = false;  
+            }
+
+            // Valida el genero.
+            if(gender == "") 
+            {
+                printError("genderErr", "Please select gender");   
+            }
+
+            else 
+            {
+                printError("genderErr", ""); genderErr = false;    
+            }
+            
+            // Valida los hobbies ?.
+
+            /**
+             *  - Si alguna de las siguientes variables está true return un false.
+             *  - Si no se inprime los siguientes detalles.
+             */
+            if((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) 
+            {
+                return false;
+            }
+
+            else 
+            {
+                var dataPreview = "You've entered the following details: \n" +
+                    "Full Name: "     + name    + "\n" +
+                    "Email Address: " + email   + "\n" +
+                    "Mobile Number: " + mobile  + "\n" +
+                    "Country: "       + country + "\n" +
+                    "Gender: "        + gender  + "\n" ;
+                    
+                    if(hobbies.length) 
+                    {
+                        dataPreview += "Hobbies: " + hobbies.join(", ");
+                    }
+
+                alert(dataPreview);
+            }
+        };
+
+        // 2. Inyecta en la zona del elemento el mensaje recibido.
+        function printError(elemId, hintMsg) 
+        {
+            document.getElementById(elemId).innerHTML = hintMsg;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Ejecute un JavaScript cuando se envíe un formulario -->
+    <form name="contactForm" onsubmit="return validateForm()" action="/examples/actions/confirmation.php" method="post">
+
+        <!-- T I T L E -->
+        <h2>Application Form</h2>
+
+        <!-- T E X T -->
+        <div class="row">
+            <label>Full Name</label>
+            <input type="text" name="name">
+            <div class="error" id="nameErr"></div>
+        </div>
+
+        <div class="row">
+            <label>Email Address</label>
+            <input type="text" name="email">
+            <div class="error" id="emailErr"></div>
+        </div>
+
+        <div class="row">
+            <label>Mobile Number</label>
+            <input type="text" name="mobile" maxlength="10">
+            <div class="error" id="mobileErr"></div>
+        </div>
+
+        <!-- S E L E C T -->
+        <div class="row">
+            <label>Country</label>
+            <select name="country">
+                <option>Select</option>
+                <option>Australia</option>
+                <option>India</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+            </select>
+            <div class="error" id="countryErr"></div>
+        </div>
+
+        <!-- R A D I O -->
+        <div class="row">
+            <label>Gender</label>
+            <div class="form-inline">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+            <div class="error" id="genderErr"></div>
+        </div>
+
+        <!-- C H E C K B O X -->
+        <div class="row">
+            <label>Hobbies <i>(Optional)</i></label>
+            <div class="form-inline">
+                <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+                <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+                <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+            </div>
+        </div>
+
+        <!-- B U T T O N S -->
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+
+</body>
+
+</html>

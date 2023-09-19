@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="miHora()">
+    <div aling="center">
+        <form action=""><u>La hora actual:</u>
+            <input type="text" name="horaactual" size="5">
+        </form>
+    </div>
+    <script>
+        function miHora() {
+            var fechaActual = new Date();
+
+            var hora = fechaActual.getHours();
+            var min  = fechaActual.getMinutes();
+            var seg  = fechaActual.getSeconds();
+
+            if (hora < 10) {
+                hora = '0' + hora;
+            }
+            if (min < 10) {
+                min = '0' + min;
+            }
+            if (seg < 10) {
+                seg = '0' + seg;
+            }
+
+            tiempo = hora + ':' + min + ':' + seg;
+            document.forms[0].horaactual.value=tiempo;
+            setTimeout ("miHora()",1000);
+        }
+    </script>
+</body>
+</html>

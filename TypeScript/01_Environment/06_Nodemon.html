@@ -1,0 +1,21 @@
+<!-- Agregar el siguiente archivo del proyecto -->
+<p>
+    nodemon.json
+</p>
+
+<!-- Parámetros -->
+<p>
+    {
+        <!-- Escuche los archivos en la carpeta -->
+        "watch": ["src"],
+
+         <!-- Indique qué extensiones de archivo escuchar y actualice el entorno de tiempo de ejecución -->
+        "ext": ".ts, .js",
+
+        <!-- Archivos o carpetas a ignorar -->
+        "ignore": ["node_modules"],
+
+        <!-- Ejecuta el siguiente archivo cada vez que se modifica algo -->
+        "exec": "ts-node ./src/index.ts"
+    }
+</p>

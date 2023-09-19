@@ -1,0 +1,79 @@
+<!-- Ejemplo 1 -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Obtiene como parámetro el nombre del evento realizado -->
+    <script type="text/JavaScript" >
+
+        function Func(name) 
+        {
+            let div = document.getElementById('mensaje');
+
+            div.innerHTML = name;
+        }
+        
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Ejecute un JavaScript cuando se haga clic en un elemento -->
+    <input type="button" onclick="Func('onclick')" value ="onclick"/>
+    
+    <br/>
+
+    <!-- Zona de inyección del script -->
+    <div id="mensaje"></div>
+
+</body>
+
+</html>
+
+<br/><br/>
+
+<!-- Ejemplo 2 -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Este es un ejemplo para eventos de ratón.</title>
+
+</head>
+
+<body>
+
+    <!-- Código para mostrar el funcionamiento del controlador onclick -->
+    <button onclick="funHandler('onclick')"         style="color:#FF0000">Haga clic aquí para generar un evento de clic del mouse.</button></br>
+
+    <p>Pase el mouse sobre el botón y obtenga las coordenadas del puntero del mouse.</p>
+
+    <h3 id="hid"></h3>
+
+    <script>
+
+        function funHandler(mens) 
+        {
+            document.getElementById("divid").innerHTML="El evento Mouse " + mens + " es generado y manejado.";
+        }
+
+    </script>
+
+    <div id="divid" style="color: #0900C4"></div>
+
+</body>
+
+</html>

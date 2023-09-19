@@ -1,0 +1,21 @@
+div 
+{
+
+    border-width: 10px;
+    border-color: aquamarine;
+    border: 5em solid transparent;
+    border: 5em solid orange;
+
+    /* border-style */      /* Keyword values */
+    border-style: none;     border-top-style: none;
+    border-style: hidden;   border-top-style: hidden;
+    border-style: dotted;   border-top-style: dotted;
+    border-style: dashed;   border-top-style: dashed;
+    border-style: solid;    border-top-style: solid;
+    border-style: double;   border-top-style: double;
+    border-style: groove;   border-top-style: groove;
+    border-style: ridge;    border-top-style: ridge;
+    border-style: inset;    border-top-style: inset;
+    border-style: outset;   border-top-style: outset;
+
+}

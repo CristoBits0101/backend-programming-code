@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ejemplo de getElementsByTagName</title>
+
+    <script src="../js/04_Form.js"></script>
+
+</head>
+
+<body>
+
+    <p>Algo de texto</p>
+    <p>Algo de texto</p>
+
+    <div id="div1" >
+
+        <p>Algo de texto en div1</p>
+        <p>Algo de texto en div1</p>
+        <p>Algo de texto en div1</p>
+
+        <div id="div2" >
+
+            <p>Algo de texto en div2</p>
+            <p>Algo de texto en div2</p>
+
+        </div>
+
+    </div>
+
+    <p>Algo de texto</p>
+    <p>Algo de texto</p>
+
+    <button onclick="getAllParaElems();">
+        Muestra todos los elementos p en el documento
+    </button><br />
+
+    <button onclick="div1ParaElems();">
+        Muestra todos los elementos p en div1
+    </button><br />
+
+    <button onclick="div2ParaElems();">
+        Muestra todos los elementos p en div2
+    </button><br />
+
+    <button onclick="pinto();">
+        Pinta "p"
+    </button>
+
+</body>
+
+</html>

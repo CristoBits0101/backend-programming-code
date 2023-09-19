@@ -1,0 +1,6 @@
+empty-cells 
+{
+    empty-cells: show;      /* Muestra bordes y fondos          */
+    empty-cells: hide;      /* Ocultar los bordes y fondos      */
+    empty-cells: inherit;   /* Permite heredar de padres vacios */
+}

@@ -1,0 +1,19 @@
+/*
+    - Top, Right, bottom, left
+*/
+div {margin: 2% auto 0 auto;}
+
+/*
+    - 
+*/
+div{margin: 2% 1% 2%;}
+
+/*
+    - Top + bottom, Right + left
+*/
+div {margin: 2% 1%;}
+
+/*
+    - Todo
+*/
+div {margin: 1%;}

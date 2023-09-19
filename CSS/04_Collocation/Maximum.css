@@ -1,0 +1,12 @@
+/*
+    - Establecen el alto y ancho maximo y minimo que pueden alcanzar los elementos.
+    - Se utiliza para elementos responsve.
+*/
+div 
+{
+    max-width: 100px;
+    min-width: 50px;
+
+    max-height: 100px;
+    min-height: 50px ;
+}

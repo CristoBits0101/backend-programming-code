@@ -1,0 +1,15 @@
+<!-- File -->
+<p>
+    add parameters RUN npm, for the changes to take effect and install nodemon.
+    
+    <!-- Empaquetar una aplicación anfitriona -->
+    create a Dockerfile 
+    
+    <!-- Parámetros -->
+    FROM program_name:version
+    RUN npm i -g nodemon
+    RUN mkdir -p /path/where/the/container/code/will/be
+    Workdir /home/app (route in which we will be working)
+    EXPOSE 0000 (Port to connect to the app from the host)
+    CMD ["nodemon", "index.ext"]
+</p>

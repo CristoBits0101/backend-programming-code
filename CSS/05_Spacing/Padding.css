@@ -1,0 +1,19 @@
+/*
+    - Top, Right, bottom, left
+*/
+div {padding: 2% auto 0 auto;}
+
+/*
+    - 
+*/
+div{padding: 2% 1% 2%;}
+
+/*
+    - Top + bottom, Right + left
+*/
+div {padding: 2% 1%;}
+
+/*
+    - Todo
+*/
+div {padding: 1%;}

@@ -1,0 +1,7 @@
+/*
+    Los css se puede poner aquí pero es mejor en resources/css y vite se encarga de cargalos.
+*/
+
+h1 {
+    color: red;
+}

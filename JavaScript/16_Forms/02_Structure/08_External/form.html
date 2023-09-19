@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        - Supuesto Práctico UT5
+        - Cristo Rubén Pérez Suárez
+    </title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form method="POST" action="" class="formulario" id="formulario" enctype="multipart/form-data">
+
+            <!-- I Z Q U I E R D O S -->
+            <div id="div1">
+
+                <label for="dni">*DNI</label>
+                <input type="text" class="obligatorio" id="dni" name="dni">
+                <br>
+
+                <label for="firstName">*FIRST NAME</label>
+                <input type="text" class="obligatorio" id="firstName" name="firstName">
+                <br>
+
+                <label for="lastName">*LAST NAME</label>
+                <input type="text" class="obligatorio" id="lastName" name="lastName">
+                <br>
+
+                <label for="date">*SELECT DATE</label>
+                <input type="date" class="obligatorio" id="date" name="date">
+                <br>
+
+                <label for="email">*EMAIL ADDRESS</label>
+                <input type="email" class="obligatorio" id="email" name="email">
+                <br>
+
+                <label for="country">*COUNTRY</label>
+                <select class="obligatorio" id="country" name="country">
+                    <option value="">Choose a country</option>
+                    <option value="es">Spain</option>
+                    <option value="jp">Japan</option>
+                </select>
+                <br>
+
+                <label for="biography">BIOGRAPHY</label>
+                <textarea type="text" id="biography" name="biography" cols="30" rows="3"></textarea>
+
+            </div>
+
+            <!-- C E N T R A L E S -->
+            <div id="div2">
+
+                <label for="tel">*PHONE NUMBER</label>
+                <input type="tel" class="obligatorio" id="tel" name="tel">
+                <br>
+
+                <label for="affiliations">AFFILIATIONS</label>
+                <textarea type="text" id="affiliations" name="affiliations" cols="30" rows="3"></textarea>
+                <br>
+
+                <label for="occupation">*OCCUPATION</label>
+                <select class="obligatorio" id="occupation" name="occupation">
+                    <option value="">Choose an occupation</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Singer">Singer</option>
+                </select>
+                <br>
+
+                <label for="animal">*TYPE OF ANIMAL</label>
+                <select class="obligatorio" id="animal" name="animal">
+                    <option value="">Choose a animal</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                </select>
+                <br>
+
+                <label for="race">*TYPE OF RACE</label>
+                <select class="obligatorio" id="race" name="race">
+                    <option value="">Choose a race</option>
+                    <option value="hair">Hair</option>
+                    <option value="hairless">Hairless</option>
+                </select>
+                <br>
+
+                <label for="gadget">FAVORITE GADGET</label>
+                <input type="text" id="gadget" name="gadget">
+                <br>
+
+                <button type="button" value="enviar" id="enviar">Send your data</button>
+
+            </div>
+
+            <!-- D E R E C H O S -->
+            <div id="div3">
+
+                <label for="talent">TYPE OF TALENT</label>
+                <select id="talent" name="talent">
+                    <option>Choose a talent</option>
+                    <option>Fly</option>
+                    <option>Teleport</option>
+                </select>
+                <br>
+
+                <label for="drink">FAVORITE DRINK</label>
+                <input type="text" id="drink" name="drink">
+                <br>
+
+                <label for="power">SPECIAL POWER</label>
+                <input type="text" id="power" name="power">
+                <br>
+
+                <label for="weaponChoice">WEAPON OF CHOICE</label>
+                <input type="text" id="weaponChoice" name="weaponChoice">
+                <br>
+
+                <label for="comment">COMMENTS</label>
+                <textarea type="text" id="comment" name="comment" cols="30" rows="3"></textarea>
+                <br>
+
+                <label for="language">*LANGUAGE</label>
+                <select class="obligatorio" id="language" name="language">
+                    <option value="">Choose a language</option>
+                    <option value="es">Spain</option>
+                    <option value="jp">Japan</option>
+                </select>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="./validation.js"></script>
+
+</body>
+
+</html>

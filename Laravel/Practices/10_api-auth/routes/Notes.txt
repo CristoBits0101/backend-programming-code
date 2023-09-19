@@ -1,0 +1,4 @@
+Construcir un sistema de autenticación en backend:
+    1. Construir el controlador que registre los usuarios.
+    2. Construir el proceso de login.
+    3. Las rutas que se le van a servir cuando este autentificado se le va a servir con el middleware auth.sanctum.

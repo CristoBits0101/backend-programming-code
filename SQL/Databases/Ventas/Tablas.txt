@@ -1,0 +1,19 @@
+CREATE DATABASE dbventas;
+USE dbventas;
+
+CREATE TABLE Inventario(
+	id_inventario INTEGER AUTO_INCREMENT NOT NULL,
+	descripcion VARCHAR(255),
+	cantidad_almacen INTEGER NOT NULL,
+	precio_unidad NUMERIC(4,2) NOT NULL,
+	Constraint PK_inventario PRIMARY KEY(id_inventario)
+);
+
+CREATE TABLE Ventas(
+	id_ventas INTEGER AUTO_INCREMENT NOT NULL,
+	id_inv INTEGER NOT NULL,
+	cantidad INTEGER,
+	precio NUMERIC(9,2),
+	Constraint PK_ventas PRIMARY KEY(id_ventas),
+	Constraint FK_inv FOREIGN KEY (id_inv) REFERENCES Inventario(Id_inventario)
+);

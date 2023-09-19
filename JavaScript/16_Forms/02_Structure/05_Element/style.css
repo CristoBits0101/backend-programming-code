@@ -1,0 +1,11 @@
+#miFormulario input:invalid 
+{
+    /* Estilos para los campos inválidos */
+    border: 2px solid red;
+}
+  
+#miFormulario input:valid 
+{
+/* Estilos para los campos válidos */
+border: 2px solid green;
+}

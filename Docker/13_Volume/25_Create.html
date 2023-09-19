@@ -1,0 +1,26 @@
+<!-- File -->
+<p>
+    <!-- Crear un volumen dentro de docker-compose para que los datos persistan si eliminamos el contenedor -->
+    <li>
+        <!-- Automatizar el montaje con docker compose -->
+        add a file named docker-compose.yml to your root directory
+
+        <!-- Parámetros, no los modifique solo los valores, respete las tabulaciones -->
+        version: "version_number" or # syntax=docker/dockerfile:1
+        services:
+          nombre_container
+            build: . (container path)
+            ports:
+              - "HostPortNumber:ContainerPortNumber"
+            links: 
+              - container_name
+          nombres_app:
+            image: program_name
+            ports:
+              - "HostPortNumber:ContainerPortNumber"
+            environment:
+              - variable name=valor
+            volumes:/data/path/app <!-- Para indicar los contenedores a utilizar por los volúmenes -->
+        volumes:                   <!-- Para indicar los volúmenes a utilizar por los contenedores -->
+          app_volume_name_1:
+</p>

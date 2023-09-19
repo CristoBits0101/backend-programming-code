@@ -1,0 +1,12 @@
+/*
+    - Orden de prevalencia de estilos:
+        1. !important.
+        2. En línea.
+        3. Incrustadas.
+        4. importadas.
+        5. Enlazadas.
+
+    - Orden de prevalencia de declaraciones:
+        2. h1 {color: blue;}
+        1. h1 {color: red;}
+*/

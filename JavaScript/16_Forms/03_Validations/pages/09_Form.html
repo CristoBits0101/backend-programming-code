@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        window Blur and Focus method
+    </title>
+
+    <style>
+        
+        body 
+        {
+            text-align: center;
+        }
+            
+        .gfg 
+        {
+            font-size: 40px;
+            font-weight: bold;
+            color: green;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="gfg">GeeksforGeeks</div>
+
+    <h2>Blur and Focus</h2>
+
+    <script>
+
+        var Window;
+  
+        // Función que abre la nueva Ventana.
+        function windowOpen() 
+        {
+            Window = window.open("https://www.google.org/", "_blank", "width=400, height=450");
+        }
+  
+        // Función que Cierra la Ventana abierta.
+        function windowClose() 
+        {
+            Window.close();
+        }
+  
+        // Función que desenfoca la ventana abierta.
+        function windowBlur() 
+        {
+            Window.blur();
+        }
+  
+        // Función que se enfoca en la ventana abierta.
+        function windowFocus() 
+        {
+            Window.focus();
+        }
+
+    </script>
+
+    <button onclick="windowOpen()">
+        Open 
+    </button>
+
+    <button onclick="windowBlur()">
+        Blur 
+    </button>
+
+    <button onclick="windowFocus()">
+        Focus 
+    </button>
+
+    <button onclick="windowClose()">
+        Close 
+    </button>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+insert node
+<libro>
+<cod_libro>6</cod_libro>
+<titulo>Pepa</titulo>
+<editorial>AutonomaTotal</editorial>
+<edicion>SuperSayan</edicion>
+<isbn>-10000000</isbn>
+<numpaginas>0.3</numpaginas>
+<autores>
+<autor>
+<cod_autor>Maravilloso</cod_autor>
+<nombre>No_tengo</nombre>
+<apellidos>TopSecret</apellidos>
+<fechanacimiento>Paleolitico</fechanacimiento>
+<nacionalidad>Napolitana</nacionalidad>
+<autor>
+<autores>
+<libro>
+before doc("libros_con_dtd.xml")//libros/libro[1]

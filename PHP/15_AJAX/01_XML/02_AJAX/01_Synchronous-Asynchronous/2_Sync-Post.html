@@ -1,0 +1,35 @@
+<script type = "text/javascript">
+
+    // 1. Instanciamos el objeto XMLHttpRequest.
+    var xhttp = new XMLHttpRequest();
+
+    // 2. Preparamos la petición.
+    xhttp.open("POST", " hora_servidor.php ", false);
+
+    // 3. En las peticiones POST se deben añadir los siguientes parámetros tal cual.
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    // 5. Añadimos variables en la URL.
+    xhttp.send("param1=value1&param2=value2");
+
+    // 6. 
+    if (xhttp.status == 200) 
+    {
+        alert("OK");
+    } 
+    
+    else 
+    {
+        alert("Error");
+    }
+
+    // 7.
+    alert(xhttp.response);
+
+    // 8.
+    for ($i = 0; $i < 1000; $i++) 
+    {
+        console.log("Haciendo cosas despues de la peticion..");
+    }
+
+</script>

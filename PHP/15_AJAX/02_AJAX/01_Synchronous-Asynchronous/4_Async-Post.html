@@ -1,0 +1,25 @@
+<script type = "text/javascript">
+
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () 
+    {
+        if (this.readyState == 4 && this.status == 200) 
+        {
+            alert(this.response);
+        }
+    };
+
+    xhttp.open("POST", "hora_servidor.php", true);
+
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    xhttp.send("param1=value1&param2=value2");
+
+    // Puedo seguir haciendo acciones sin esperar la respuesta.
+    for ($i = 0; $i < 1000; $i++) 
+    {
+        console.log("Haciendo cosas mientras espero la peticion..");
+    }
+    
+</script>

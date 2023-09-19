@@ -1,0 +1,29 @@
+/*
+    - Poner clear hace que un div no se quede por detrás de otro flotado.
+    - Mover un div a un nivel superior hace que no se quede detrás de uno flotado. 
+*/
+
+.float 
+{
+    float: none;
+    float: left; 
+    float: right; 
+    float: inherit; 
+}
+.clear 
+{
+    clear: both;    /* Mueve el elemento por debajo de los flotantes          */
+    clear: left;    /* El elemento comienza por debajo de los flotantes-left  */
+    clear: right;   /* El elemento comienza por debajo de los flotantes-right */
+    clear: none;    /* Permite elementos flotantes a la izquierda y derecha   */
+    clear: inherit; /* Hereda la propiedad clear al flotar                    */
+}
+
+/* 
+    - Poniendo el div al nivel del padre.
+    - Haciendo un clear: both.
+*/
+.hacerVisible 
+{
+    clear: both;
+}

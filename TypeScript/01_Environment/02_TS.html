@@ -1,0 +1,20 @@
+<!-- Usar dependencias sin instalarlas con npx                 -->
+<!-- Se genera un archivo de configuración para mecanografiado -->
+<p>
+
+    npx tsc --init --rootDir src --outDir --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowjs true --noImplicitAny true
+    
+    <!-- 
+        npx tsc                | Es el compilador TS.
+        --init                 | Genera un archivo de configuración TS.
+        --rootDir src          | Es la carpeta donde se guardará la compilación de TS a JS.
+        --outDir build         | Donde se compila el proyecto a desplegar.
+        --esModuleInterop      | Con valor true permite tener varias versiones de ECMAScript activas en el proyecto por defecto es true.
+        --resolveJsonModule    | Permitir archivos de usuario módulo json en archivos.
+        --lib + es6            | ES6 en adelante especificar versiones js.
+        --module commonjs      | Transpílelo a un módulo commonjs.
+        --allowjs + true       | Permite que js y ts coexistan en un proyecto.
+        --noImplicitAny + true | Evita que los usuarios usen any para intercambiar tipos y no puede ocurrir si las variables tienen este valor.
+    -->
+
+</p>

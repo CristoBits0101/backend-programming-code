@@ -1,0 +1,34 @@
+<!-- Cuando se elija una página será la por defecto en la cookie -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Pedir el idioma del usuario</title>
+
+    <script language="javascript" type="text/javascript">
+        function enviarIdioma(idioma) 
+        {
+            location.href = "../src/Save-Cookie.php?idiomaUsuario=" + idioma;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Ejecutan la función JS enviarIdioma() de la parte superior -->
+    <a href="javascript:enviarIdioma('sp');">Ver la versión del sitio en español</a>
+
+    <br>
+
+    <a href="javascript:enviarIdioma('en');">View the english version of the site</a>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "04_strings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Comparison.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

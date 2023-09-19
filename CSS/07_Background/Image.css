@@ -1,0 +1,9 @@
+body 
+{
+    background-image: url(fondo.gif); 
+}
+
+p#cabecera 
+{
+    background-image: url(fondo-cuerpo.gif);
+}

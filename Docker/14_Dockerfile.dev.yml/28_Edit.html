@@ -1,0 +1,24 @@
+<!-- File -->
+<p>
+    <!-- 
+        - Configure múltiples entornos y optimice el desarrollo con Dockerfile.dev
+        - El otro Dockerfile.yml es para producción y automatizar su ensamblaje.
+    -->
+        add a file named docker-compose.dev to your root directory
+
+        <!-- Parámetros, no los modifique solo los valores, respete las tabulaciones -->
+        version: "version_number" or # syntax=docker/dockerfile:1
+        services:
+          nombre_container
+            build: . (container path)
+            ports:
+              - "HostPortNumber:ContainerPortNumber"
+            links: 
+              - container_name
+          nombres_app:
+            image: program_name
+            ports:
+              - "HostPortNumber:ContainerPortNumber"
+            environment:
+              - variable name=valor
+</p>

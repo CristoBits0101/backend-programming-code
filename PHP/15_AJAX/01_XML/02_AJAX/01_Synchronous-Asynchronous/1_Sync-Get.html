@@ -1,0 +1,43 @@
+<script type = "text/javascript">
+
+    //  1. Instanciamos el objeto XMLHttpRequest.
+    var xhttp = new XMLHttpRequest();
+
+    /**
+     *  2. El método open sirve para configurar la petición. 
+     *      - Parámetro 1: Tipo de petición (Get, Post, Pull, Delete).
+     *      - Parámetro 2: URL de destino   (página_destino.php).    
+     *      - Parámetro 3: Sync or Async    (false->Sync or true->Async).
+     */
+    xhttp.open("GET", "hora_servidor.php?param1=value1", false);
+
+    /**
+     *  3. Nos ponemos a la escucha con el evento addEventListener.
+     *      - Parámetro 1: Cuando reacciona.
+     *      - Parámetro 2: Que hace al reaccionar.
+     */
+    xhttp.addEventListener('load', alert('hacerAlgo'));
+
+    //  4. Ejecutamos que se realice la petición que se configuró.
+    xhttp.send();
+
+    //  5. Si la petición devuelve un 200 ejecutamos el alert ok, sino error.
+    if (xhttp.status === 200)
+    {
+        alert("OK");
+    }
+    
+    else 
+    {
+        alert("Error");
+    }
+
+    //  6. Mostramos cual fue la respuesta si 200 o no.
+    alert(xhttp.response);
+
+    for ($i = 0; $i < 1000; $i++)
+    {
+        console.log("Haciendo cosas despues de la peticion..");
+    }
+    
+</script>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form method="post" action="" enctype="multipart/form-data">
+
+            <!-- I M A G E -->
+            <div class="divs__padres">
+                <p>Image:</p>
+                <div>
+                    <input type="text" id="userId" name="userId">
+                    <small>Small</small>
+                </div>
+                <input type="image" id="image" alt="Login" src="./login.png">
+            </div>
+
+            <br/>
+
+            <!-- U R L -->
+            <div>
+                <label for="url">URL:</label>
+                <br/>
+                <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required>
+            </div>
+
+            <br/>
+
+            <!-- S E A R C H -->
+            <div>
+                <label for="site-search">Search:</label>
+                <br/>
+                <input type="search" id="site-search" name="q">
+                <button>Search</button>
+            </div>
+
+            <br/>
+
+            <!-- T E X T -->
+            <div>
+                <label for="username">Text:</label>
+                <br>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <br/>
+
+            <!-- P A S S W O R D -->
+            <div>
+                <label for="pass">Password:</label>
+                <br/>
+                <input type="password" id="pass" name="password" minlength="8" required>
+            </div>
+
+            <br/>
+
+            <!-- N U M B E R -->
+            <div>
+                <label for="tentacles">Number:</label>
+                <br/>
+                <input type="number" id="tentacles" name="tentacles" min="10" max="100">
+
+            </div>
+
+            <br/>
+
+            <!-- P H O N E -->
+            <div>
+                <label for="phone">Phone:</label>
+                <br/>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <small>Small</small>
+            </div>
+
+            <br/>
+
+            <!-- E M A I L -->
+            <div>
+                <label for="email">Email:</label>
+                <br/>
+                <input type="email" id="email" pattern=".+@globex\.com" size="30" required>
+            </div>
+
+            <br/>
+
+            <!-- S E L E C T -->
+            <select name="select">
+                <option value="value1" selected>Value 1</option>
+                <option value="value2"         >Value 2</option>
+                <option value="value3"         >Value 3</option>
+            </select>
+
+            <!-- S E L E C T -->
+            <select name="select">
+                <option value="value1" selected>Value 1</option>
+                <option value="value2"         >Value 2</option>
+                <option value="value3"         >Value 3</option>
+            </select>
+
+            <br/><br/>
+
+            <!-- R A D I O -->
+            <div>
+                <fieldset>
+                    <legend>Legend:</legend>
+                    <div>
+                        <input type="radio" id="huey" name="drone" value="huey" checked>
+                        <label for="huey">Radio 1</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="dewey" name="drone" value="dewey">
+                        <label for="dewey">Radio 2</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br/>
+
+            <!-- C H E C K B O X -->
+            <div>
+                <fieldset>
+                    <legend>Legend:</legend>
+                    <div>
+                      <input type="checkbox" id="scales" name="scales" checked>
+                      <label for="scales">Checkbox 1</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="horns" name="horns">
+                      <label for="horns">Checkbox 2</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br/>
+
+            <!-- C O L O R -->
+            <div>
+                <p>Color:</p>
+                <div>
+                    <input type="color" id="head" name="head" value="#e66465">
+                    <label for="head">Color 1</label>
+                </div>
+                <div>
+                    <input type="color" id="body" name="body" value="#f6b73c">
+                    <label for="body">Color 2</label>
+                </div>
+            </div>
+
+            <br/>
+
+            <!-- R A N G E -->
+            <div>
+                <p>Range:</p>
+                <div>
+                    <input type="range" id="volume" name="volume" min="0" max="11">
+                    <label for="volume">Range 1</label>
+                </div>
+                <div>
+                    <input type="range" id="cowbell" name="cowbell" min="0" max="100" value="90" step="10">
+                    <label for="cowbell">Range 2</label>
+                </div>
+            </div>
+
+            <br/>
+
+            <!-- W E E K -->
+            <div>
+                <label for="week">Week:</label>
+                <input type="week" name="week" id="camp-week" min="2018-W18" max="2018-W26" required>
+            </div>
+
+            <br/>
+
+            <!-- M O N T H -->
+            <div>
+                <label for="start">Month:</label>
+                <br>
+                <input type="month" id="start" name="start" min="2018-03" value="2018-05">
+            </div>
+
+            <br/>
+
+            <!-- D A T E -->
+            <div>
+                <label for="start">Date:</label>
+                <br/>
+                <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+            </div>
+
+            <br/>
+
+            <!-- T I M E -->
+            <div>
+                <label for="appt">Time:</label>
+                <br/>
+                <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+                <small>Small</small>
+            </div>
+
+            <br/>
+
+            <!-- D A T E T I M E -->
+            <div>
+                <label for="meeting-time">Date Time Local:</label>
+                <br/>
+                <input type="datetime-local" id="meeting-time" name="meeting-time" value="2018-06-12T19:30" min="2018-06-07T00:00" max="2018-06-14T00:00">
+            </div>
+
+            <br/>
+
+            <!-- F I L E -->
+            <div>
+                <label for="avatar">File:</label>
+                <br/>
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+            </div>
+
+            <br/>
+
+            <!-- B U T T O N -->
+            <!-- R E S E T   -->
+            <!-- S U B M I T -->
+            <div id="botones">
+                <input type="button" class="favorite_styled" value="Button">
+                <input type="reset"  class="favorite_styled" value="Reset">
+                <input type="submit" class="favorite_styled" value="Submit">
+            </div>
+
+            <!-- H I D D E N -->
+            <input type="hidden" value="">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Demostración de getElementsByTagName() de JavaScript</title>
+
+</head>
+
+<body>
+
+    <h1>Demostración de getElementsByTagName() de JavaScript</h1>
+
+    <h2>Primer encabezado</h2>
+
+    <p>Este es el primer párrafo.</p>
+
+    <h2>Segundo título</h2>
+
+    <p>Este es el segundo párrafo.</p>
+
+    <h2>Tercer título</h2>
+
+    <p>Este es el tercer párrafo.</p>
+
+    <button id="btnCount" onclick="cambiacolor()">cambiacolor H2</button>
+
+    <script>
+
+        function cambiacolor() 
+        {
+            let headings = document.getElementsByTagName('h2')[0].style.backgroundColor = "red";;
+        }
+
+    </script>
+
+</body>
+
+</html>

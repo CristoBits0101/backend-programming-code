@@ -1,0 +1,38 @@
+[
+    {
+        "id"       : 1,
+        "titulo"   : "El padrino",
+        "director" : "Francis Ford Coppola",
+        "actores"  : "Marlon Brando, Al Pacino",
+        "genero"   : "Crimen, Drama",
+        "duracion" : "175 min.",
+        "argumento": "En el verano de 1945, se celebra la boda de Connie (Talia Shire) y Carlo Rizzi (Gianni Russo). Connie es la única hija de Don Vito Corleone (Marlon..."
+    },
+    {
+        "id"       : 2,
+        "titulo"   : "La vida es bella",
+        "director" : "Roberto Benigni",
+        "actores"  : "Roberto Benigni, Horst Buchholz",
+        "genero"   : "Drama, Comedia",
+        "duracion" : "117 min.",
+        "argumento": "La Segunda Guerra Mundial está a punto de estallar en Europa. Mientras tanto, Guido llega a un pueblo italiano con la intención de abrir una..."
+    },
+    {
+        "id"       : 3,
+        "titulo"   : "Vengadores: Endgame",
+        "director" : "Joe Russo, Anthony Russo",
+        "actores"  : "Robert Downey Jr., Chris Evans,...",
+        "genero"   : "Fantasía, Acción",
+        "duracion" : "181 min.",
+        "argumento": "Después de los devastadores eventos ocurridos en Vengadores: Infinity War, el universo está en ruinas debido a las acciones de Thanos, el Titán..."
+    },
+    {
+        "id"       : 4,
+        "titulo"   : "UP",
+        "director" : "Pete Docter, Bob Peterson",
+        "actores"  : "Edward Asner, Jordan Nagai",
+        "genero"   : "Animación, Familia, Fantasía",
+        "duracion" : "95 min.",
+        "argumento": "Cuando amenazan con demoler su vivienda para construir un establecimiento, Carl Fredricksen, un antiguo vendedor de globos de 78 años, decide que."
+    }
+]

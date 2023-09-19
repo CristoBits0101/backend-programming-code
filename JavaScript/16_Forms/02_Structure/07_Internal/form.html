@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        - Supuesto Práctico UT5
+        - Cristo Rubén Pérez Suárez
+    </title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- V A L I D A C I O N E S -->
+    <script>
+
+        const validateForm  = () =>
+        {
+            // Almacena el estado de las validaciones.
+            var success = true
+
+            // Almacena expresiones regulares válidas en España.
+            let RegExp = ''
+
+            // Almacena los inputs que son obligatorios rellenar.
+            const inputData = document.getElementsByClassName('obligatorio')
+
+            // Comprueba si hay valores false.
+            for (let index = 0; index < inputData.length; index++)
+            {
+                if (!Boolean(inputData[index].value))
+                {
+                    inputData[index].placeholder = '¡Datos incorrectos!';
+                    success = false
+                }
+            }
+            
+            // Comprueba si el formulario paso el primer filtro.
+            if (success === false)
+            {
+                alert('Check the form...')
+            }
+
+            //  - Solo se ejecuta si la validación anterior está correcta: success === true.
+            /** 
+             *  - Comprueba si los caracteres introducidos en los inputs están permitidos.
+             *  - Comprueba solo los inputs de tipo text porque los select ya tienen un valor asignado permitido.
+             */
+            else
+            {
+                // Recorremos otra vez el array.
+                for (let index = 0; index < inputData.length; index++)
+                {
+                    // Referenciamos al atributo id de los inputs.
+                    switch (inputData[index].id)
+                    {
+                        // Verificamos los valores de los inputs y actuamos basándonos en el resultado obtenido.
+                        case 'dni':
+
+                            RegExp = /^[0-9]{8}[A-Za-z]$/
+
+                            if (RegExp.test(inputData[index].value))
+                            {
+                                inputData[index].value = ''
+                                break
+                            }
+
+                            else
+                            {
+                                inputData[index].value = ''
+                                inputData[index].placeholder = '¡Datos incorrectos!';
+                                success = false
+                                break
+                            }
+
+                        case 'firstName':
+
+                            RegExp = /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ\s]*$/
+
+                            if (RegExp.test(inputData[index].value))
+                            {
+                                inputData[index].value = ''
+                                break
+                            }
+
+                            else
+                            {
+                                inputData[index].value = ''
+                                inputData[index].placeholder = '¡Datos incorrectos!';
+                                success = false
+                                break
+                            }
+
+                        case 'lastName':
+
+                            if (RegExp.test(inputData[index].value))
+                            {
+                                inputData[index].value = ''
+                                break
+                            }
+
+                            else
+                            {
+                                inputData[index].value = ''
+                                inputData[index].placeholder = '¡Datos incorrectos!';
+                                success = false
+                                break
+                            }
+
+                        case 'email':
+
+                            RegExp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+
+                            if (RegExp.test(inputData[index].value))
+                            {
+                                inputData[index].value = ''
+                                break
+                            }
+
+                            else
+                            {
+                                inputData[index].value = ''
+                                inputData[index].placeholder = '¡Datos incorrectos!';
+                                success = false
+                                break
+                            }
+
+                        case 'tel':
+                        
+                            RegExp = /^[0-9]{3}-[0-9]{7}$/
+
+                            if (RegExp.test(inputData[index].value))
+                            {
+                                inputData[index].value = ''
+                                break
+                            }
+
+                            else
+                            {
+                                inputData[index].value = ''
+                                inputData[index].placeholder = '¡Datos incorrectos!';
+                                success = false
+                                break
+                            }
+
+                        default:
+
+                            alert('Oops! An error has occurred');
+                            break
+                    }
+                }
+            }
+
+            // Retorna si el formulario ha pasado todas las validaciones.
+            return success;
+        }
+
+    </script>
+
+    <!-- D R O P D O W N -->
+    <Script>
+
+        // Objeto = {}
+        var animals =                                                     
+        {
+            // Atributo 1: list1[]
+            "Perros": ["Husky siberiano", "Golden retriever", "Caniche"],
+
+            // Atributo 2: list2[]                                          
+            "Gatos" : ["Persa", "Siamés", "Bobtail americano"],           
+        }
+
+        // Al cargar la ventana en el navegador se ejecuta la siguiente función anónima.
+        window.onload = () =>                                              
+        {
+            // Obtiene el id de los elementos que se van a enlazar.
+            var animal = document.getElementById("animal")
+            var race   = document.getElementById("race")
+
+            // Recorre las claves del objeto animals y las almacena en x.
+            for (var x in animals) 
+            {
+                /** 
+                 *  4.1. Accede al atributo options del elemento y inicializa la cantidad de opciones con el objeto Option.
+                 *  4.2. Añade a las opciones del elemento los datos de la lista enlazada al objeto.
+                 */
+                 animal.options[animal.options.length] = new Option(x, x)
+            }
+
+            // Al cambiar el animal se ejecuta la siguiente función:
+            animal.onchange = function() 
+            {
+                // Añadimos 1 a la longitud de la raza.
+                race.length = 1
+
+                // Volvemos a recorrer el objeto animal con this para referenciarlo.
+                for (var y of animals[this.value]) 
+                {
+                    /** 
+                     *  4.1. Accede al atributo options del elemento y inicializa la cantidad de opciones con el objeto Option.
+                     *  4.2. Añade a las opciones del elemento los datos de la lista enlazada al objeto.
+                     *  4.3. El contenido se carga todo en la posición uno del elemento, lo que hace que sea un array de options.
+                     *  4.4. Este array de options almacena los valores del objeto.
+                     */
+                    race.options[race.options.length] = new Option(y, y)
+                }
+            }
+        }
+
+    </Script>
+
+    <!-- D R O P D O W N 2 -->
+    <script>
+
+        const message = () => 
+        {
+            document.getElementById('language').value == 'es' 
+            ?
+            document.getElementById('message').innerHTML = 'Selecciona un idioma'             
+            :
+            document.getElementById('message').innerHTML = 'ホセは変わらない'  
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form method="GET" action="" class="formulario" id="formulario" enctype="multipart/form-data" onsubmit="return validateForm()">
+
+            <!-- I Z Q U I E R D O S -->
+            <div id="div1">
+
+                <label for="dni">*DNI</label>
+                <input type="text" class="obligatorio" id="dni" name="dni">
+                <br>
+
+                <label for="firstName">*FIRST NAME</label>
+                <input type="text" class="obligatorio" id="firstName" name="firstName">
+                <br>
+
+                <label for="lastName">*LAST NAME</label>
+                <input type="text" class="obligatorio" id="lastName" name="lastName">
+                <br>
+
+                <label for="date">*SELECT DATE</label>
+                <input type="date" class="obligatorio" id="date" name="date">
+                <br>
+
+                <label for="email">*EMAIL ADDRESS</label>
+                <input type="email" class="obligatorio" id="email" name="email">
+                <br>
+
+                <label for="country">*COUNTRY</label>
+                <select class="obligatorio" id="country" name="country">
+                    <option value="">Choose a country</option>
+                    <option value="es">Spain</option>
+                    <option value="jp">Japan</option>
+                </select>
+                <br>
+
+                <label for="biography">BIOGRAPHY</label>
+                <textarea type="text" id="biography" name="biography" cols="30" rows="3"></textarea>
+
+            </div>
+
+            <!-- C E N T R A L E S -->
+            <div id="div2">
+
+                <label for="tel">*PHONE NUMBER</label>
+                <input type="tel" class="obligatorio" id="tel" name="tel">
+                <br>
+
+                <label for="affiliations">AFFILIATIONS</label>
+                <textarea type="text" id="affiliations" name="affiliations" cols="30" rows="3"></textarea>
+                <br>
+
+                <label for="occupation">*OCCUPATION</label>
+                <select class="obligatorio" id="occupation" name="occupation">
+                    <option value="">Choose an occupation</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Singer">Singer</option>
+                </select>
+                <br>
+
+                <label for="animal">*TYPE OF ANIMAL</label>
+                <select class="obligatorio" id="animal" name="animal">
+                    <option value="" selected="selected">Choose a animal</option>
+                </select>
+                <br>
+
+                <label for="race">*TYPE OF RACE</label>
+                <select class="obligatorio" id="race" name="race">
+                    <option value="" selected="selected">Choose a race</option>
+                </select>
+                <br>
+
+                <label for="gadget">FAVORITE GADGET</label>
+                <input type="text" id="gadget" name="gadget">
+                <br>
+
+                <button type="submit" value="Enviar" id="enviar">Send your data</button>
+
+            </div>
+
+            <!-- D E R E C H O S -->
+            <div id="div3">
+
+                <label for="talent">TYPE OF TALENT</label>
+                <select id="talent" name="talent">
+                    <option>Choose a talent</option>
+                    <option>Fly</option>
+                    <option>Teleport</option>
+                </select>
+                <br>
+
+                <label for="drink">FAVORITE DRINK</label>
+                <input type="text" id="drink" name="drink">
+                <br>
+
+                <label for="power">SPECIAL POWER</label>
+                <input type="text" id="power" name="power">
+                <br>
+
+                <label for="weaponChoice">WEAPON OF CHOICE</label>
+                <input type="text" id="weaponChoice" name="weaponChoice">
+                <br>
+
+                <label for="comment">COMMENTS</label>
+                <textarea type="text" id="comment" name="comment" cols="30" rows="3"></textarea>
+                <br>
+
+                <label for="language">*LANGUAGE</label>
+                <select class="obligatorio" id="language" name="language" onchange="message()">
+                    <option value="">Choose a language</option>
+                    <option value="es">Spain</option>
+                    <option value="jp">Japan</option>
+                </select>
+
+                <div id="message"></div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

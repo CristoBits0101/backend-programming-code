@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>2_gestion_documentos</title>
+
+    <link rel="stylesheet" href="./02_form-styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Cristo Rubén Pérez Suárez</h1>
+
+        <h2>2º DAW-DSW: Gestión de documentos.</h2>
+
+        <form action="../02_process-documents/02_process-documents.php" method="post" enctype="multipart/form-data">
+            
+            <!-- AUTOR/ES -->
+            <div>
+                <label for="autor">Autor/es:</label>
+                <input type="text" minlength="1" maxlength="20" name="autor" id="autor">
+            </div>
+            <br />
+            
+            <!-- NOMBRE DE DOCUMENTOS -->
+            <div>
+                <label for="nombreDocumentos">Nombre de documentos:</label>
+                <input type="text" minlength="1" maxlength="20" name="nombreDocumentos" id="nombreDocumentos">
+            </div>
+            <br />
+            
+            <!-- DESCRIPCIÓN DE DOCUMENTOS -->
+            <div>
+                <label for="descripcionDocumento">Descripción de documentos:</label>
+                <textarea type="text" name="descripcionDocumento" id="descripcionDocumento" cols="30" rows="3">
+                </textarea>
+            </div>
+            <br />
+            
+            <!-- TIPO DE DOCUMENTO -->
+            <div>
+                <label for="tipoDocumento">Tipo de documento:</label>
+                <select name="tipoDocumento" id="tipoDocumento">
+                    <option value="documento" selected>Documento</option>
+                    <option value="informe">Informe</option>
+                    <option value="presentacion">Presentación</option>
+                    <option value="variados">Variados</option>
+                </select>
+            </div>
+            <br />
+            
+            <!-- EXTENSIÓN DE ARCHIVO -->
+            <div>
+                <label>Extensión de los archivos:</label>
+                <div class="ext">
+                    <input type="checkbox" name="extensiones[]" value="txt"">⠀txt
+                </div>
+                <div class="ext">
+                    <input type="checkbox" name="extensiones[]" value="pdf">⠀pdf
+                </div>
+                <div class="ext">
+                    <input type="checkbox" name="extensiones[]" value="docx">⠀docx
+                </div>
+                <div class="ext">
+                    <input type="checkbox" name="extensiones[]" value="xlsx">⠀xlsx
+                </div>
+                <div class="ext">
+                    <input type="checkbox" name="extensiones[]" value="pptx">⠀pptx
+                </div>
+                <div class="ext">
+                    <input type="checkbox" name="extensiones[]" value="odt">⠀odt
+                </div>
+            </div>
+            <br />
+            
+            <!-- PALABRAS CLAVE -->
+            <div>
+                <label for="palabrasClave">Palabras clave:</label>
+                <input type="text" minlength="1" maxlength="20" name="palabrasClave" id="palabrasClave">
+            </div>
+            <br />
+            
+            <!-- IDIOMA -->
+            <div>
+                <label for="idioma">Idioma:</label>
+                <select name="idioma" id="idioma">
+                    <option value="es" selected>Español</option>
+                    <option value="en">Inglés</option>
+                    <option value="otrosIdiomas">Otros</option>
+                </select>
+            </div>
+            <br />
+            
+            <!-- VISIBILIDAD -->
+            <fieldset style="width: 96%;">
+                <legend>Selecciona la visibilidad</legend>
+                <div class="fieldsetInline">
+                    <div class="radioButton">
+                        <label for="publico" class="radioButton">Público</label>
+                        <input type="radio" id="publico" name="visibilidad" value="publico" class="radioButton" checked>
+                    </div>
+                    <div>
+                        <label for="privado" class="radioButton">Privado</label>
+                        <input type="radio" id="privado" name="visibilidad" value="privado" class="radioButton">
+                    </div>
+                </div>
+            </fieldset>
+            <br />
+            
+            <!-- TEMÁTICA -->
+            <div>
+                <div class="ext">
+                    <input type="checkbox" name="tematica[]" value="⠀administracion">⠀Administración
+                </div>
+                <div class="ext">
+                    <input type="checkbox" name="tematica[]" value="⠀finanzas">⠀Finanzas
+                </div>
+                <div class="ext">
+                    <input type="checkbox" name="tematica[]" value="⠀negocio">⠀Negocio
+                </div>
+                <div class="ext">
+                    <input type="checkbox" name="tematica[]" value="⠀informática">⠀Informatica
+                </div>
+                <div class="ext">
+                    <input type="checkbox" name="tematica[]" value="⠀otros">⠀Otros
+                </div>
+            </div>
+            <br />
+            
+            <!-- SUBIR DOCUMENTOS -->
+            <div>
+                <label for="fichero1">Archivos:</label>
+                <input type="file" name="fichero1" id="fichero1" accept=".txt,.pdf,.docx,.xlsx,.pptx,.odt">
+            </div>
+            <div>
+                <input type="file" name="fichero2" id="fichero2" accept=".txt,.pdf,.docx,.xlsx,.pptx,.odt">
+            </div>
+            <div>
+                <input type="file" name="fichero3" id="fichero3" accept=".txt,.pdf,.docx,.xlsx,.pptx,.odt">
+            </div>
+            <br />
+
+            <!-- BOTONES -->
+            <div id="botones">
+                <button type="reset" id="reiniciar">Reiniciar Formulario</button>
+                <button type="submit" id="enviar" name="enviar">Registrar Documentos</button>
+            </div>
+            
+            <!-- VALIDAR -->
+            <div>
+                <input type="hidden" name="formulario">
+            </div>
+
+        </form>
+
+    </div>
+    <br />
+
+</body>
+
+</html>

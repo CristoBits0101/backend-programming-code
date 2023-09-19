@@ -1,0 +1,1 @@
+document.getElementById(id_objeto).style.background = "#FFF200";

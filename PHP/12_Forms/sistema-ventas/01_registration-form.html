@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>1_sistema_ventas</title>
+
+    <link rel="stylesheet" href="./css/00_registration-form-style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Cristo Rubén Pérez Suárez</h1>
+        <h2>2º DAW-DSW: Sistema de ventas.</h2>
+
+        <form
+            action="./php/02_insert-user.php"
+            method="post"
+            enctype="multipart/form-data"
+            >
+            <!-- NOMBRE -->
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input
+                    type="text"
+                    minlength="1"
+                    maxlength="20"
+                    name="nombre"
+                    id="nombre"
+                >
+            </div>
+            <br/>
+            <!-- APELLIDOS -->
+            <div>
+                <label for="apellidos">Apellidos:</label>
+                <input
+                    type="text"
+                    minlength="1"
+                    maxlength="20"
+                    name="apellidos"
+                    id="apellidos"
+                >
+            </div>
+            <br/>
+            <!-- USUARIO -->
+            <div>
+                <label for="role">Usuario:</label>
+                <select name="role">
+                    <option value="administrador">
+                        Administrador
+                    </option>
+                    <option value="empleado" selected>
+                        Empleado
+                    </option>
+                    <option value="cliente">
+                        Cliente
+                    </option>
+                  </select>
+            </div>
+            <br/>
+            <!-- CONTRASEÑA -->
+            <div>
+                <label for="contrasena">Contraseña:</label>
+                <input
+                    type="password"
+                    minlength="1"
+                    maxlength="30"
+                    name="contrasena"
+                    id="contrasena"
+                >
+            </div>
+            <br/>
+            <!-- REPITA CONTRASEÑA -->
+            <div>
+                <label for="repitaContrasena">Repita contraseña:</label>
+                <input
+                    type="password"
+                    minlength="1"
+                    maxlength="30"
+                    name="repitaContrasena"
+                    id="repitaContrasena"
+                >
+            </div>
+            <br/>
+            <!-- TELÉFONO -->
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input
+                    type="tel"
+                    size="9"
+                    name="telefono"
+                    id="telefono"
+                >
+            </div>
+            <br/>
+            <!-- EMAIL -->
+            <div>
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    minlength="1"
+                    maxlength="30"
+                    name="email"
+                    id="email"
+                >
+            </div>
+            <br/>
+            <!-- FOTO -->
+            <div>
+                <label for="foto">Foto:</label>
+                <input
+                    type="file"
+                    name="foto"
+                    accept=".jpg,.png"
+                >
+            </div>
+            <!-- ENVIAR -->
+            <br/>
+            <div id="botones">
+                <button type="reset" id="reiniciar">Reiniciar Formulario</button>
+                <button type="submit" id="enviar" name="enviar">Registrar Usuario</button>
+            </div>
+            <!-- VALIDAR -->
+            <div>
+                <input type="hidden" name="formulario">
+            </div>
+        </form>
+
+    </div>
+
+    <br/>
+
+</body>
+
+</html>

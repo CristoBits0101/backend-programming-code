@@ -1,0 +1,17 @@
+<!-- Te permite crear una compilación final más potente muy fácil -->
+<!-- Es una dependencia del desarrollador -->
+<!-- Compile el mejor formulario con esta herramienta -->
+<ol>
+
+    <!-- Herramienta de comando para instalar -->
+    <li>
+        npm install --save-dev rimraf
+    </li>
+
+    <!-- Agregue un script a paquete.json -->
+    <li>
+        "build:production": "rimraf ./build && tsc",
+        "start:production": "npm run build:production && node ./build/index.js"
+    </li>
+
+</ol>

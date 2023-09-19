@@ -1,0 +1,6 @@
+.bordes 
+{
+    border-collapse: separate; /* Separa los bordes */
+    border-collapse: collapse; /* Une los bordes    */
+    border-collapse: inherit;  /* Hereda los bordes */
+}

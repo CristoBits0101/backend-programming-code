@@ -1,0 +1,129 @@
+body 
+{
+  margin: 0px;
+  padding: 0px;
+  background-color: #fafafa;
+}
+.container 
+{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1 
+{
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-bottom: 0%;
+}
+
+h2 
+{
+  font-size: 1.2rem;
+}
+
+p 
+{
+  font-size: 0.9rem;
+}
+
+form 
+{
+  width: 50%;
+  border-radius: 10px;
+}
+
+label 
+{
+  width: 100%;
+  display: inline-block;
+}
+
+input 
+{
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+textarea 
+{
+  width: 100%;
+  margin-top: 0.2rem;
+  text-align: left;
+}
+
+select 
+{
+  margin-top: 0.2rem;
+}
+
+#foto 
+{
+  margin-bottom: 10px;
+}
+
+#reiniciar 
+{
+  width: 150px;
+  border: 2px solid black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#enviar 
+{
+  width: 150px;
+  border: 2px solid black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#botones 
+{
+  display: flex;
+  gap: 1rem;
+}
+
+.fieldsetInline 
+{
+  display: inline;
+}
+
+.radioButton 
+{
+  width: 10%;
+  display: inline;
+}
+
+#publico
+{
+  width: 10px;
+  height: 10px;
+}
+
+#privado 
+{
+  width: 10px;
+  height: 10px;
+}
+
+.ext 
+{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  margin-top: 5px;
+}

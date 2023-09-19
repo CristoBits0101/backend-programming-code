@@ -1,0 +1,7 @@
+ul 
+{
+    list-style-image: url(imagen.gif);
+    list-style-type: disc;
+    list-style-position: outside; 
+}
+   

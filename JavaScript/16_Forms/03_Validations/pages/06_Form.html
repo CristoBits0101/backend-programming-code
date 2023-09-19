@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript obtener elemento por nombre de clase Ejemplo</title>
+
+    <script src="../js/06_Form.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <fieldset>
+
+            <legend>Datos personales</legend>
+        
+            nombre: 
+            <input 
+                name="nombre" 
+                id="txtNombre" 
+                type="text" 
+                onfocus="JavaScript:enfocado(this.id);" 
+                onblur="JavaScript:desenfocado (this.id);" 
+                autofocus
+            >
+            
+            <br/>
+    
+            apellido: 
+            <input 
+                name="apellido" 
+                id="txtApellido" 
+                type="text" 
+                onfocus="JavaScript:enfocado(this.id);" 
+                onblur="JavaScript:desenfocado (this.id);"
+            >
+                
+            <br/>
+            
+            <button id="btnFocus" onclick="PonerFoco()">Poner el foco</button>
+
+        </fieldset>
+        
+    </div>
+
+</body>
+
+</html>

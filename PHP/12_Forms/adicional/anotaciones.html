@@ -1,0 +1,35 @@
+<!-- 
+
+    NAME
+    - Cada campos de los formularios contiene un name.
+    - Se puede guardar su valor tanto en variables como atributos de objetos.
+
+    SELECCIÓN MÚLTIPLE
+    - Los enum de PHP se asocian con la selección múltiple de los formularios.
+    - Los enum pueden ir en arrays asociativos.
+
+    VARIABLES SUPER GLOBALES
+    - Si los datos se envía al servidor cualquier archivo php atravez de una variable superglobal get post request puede coger los datos.
+    - Aunque el archivo de destino sea uno solo.
+
+ -->
+
+ <!--
+
+    Redirect:
+    - header("Location:error.php");
+    
+    Validation:
+    isset($_POST['idpeticion']) && !empty($_POST['idpeticion'])
+
+    isset($_POST['usuario'])    && $_POST['usuario'] === "usuario" && 
+    
+    isset($_POST['clave'])      && $_POST["clave"]   === "1234"
+
+    <input 
+        type ="hidden" 
+        name ="idpeticion" 
+        value="<?php echo round(100,1000);?>"
+    >
+
+  -->

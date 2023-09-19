@@ -1,0 +1,10 @@
+insert node <baile id ="7">
+       <Nombre>Regaeton harcore</Nombre>
+       <Precio cuota="trimestrales" moneda="euro">11</Precio>
+       <Plazas>10</Plazas>
+       <Comienzo>3/6/2021</Comienzo>
+       <Fin>5/11/2024</Fin>
+       <Profesor>Chano el Cojo</Profesor>
+       <Sala>0</Sala>
+</baile>
+as last into doc("Bailes.xml")//bailes/baile[1]

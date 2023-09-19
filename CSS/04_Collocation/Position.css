@@ -1,0 +1,39 @@
+/* 
+    - Static: Viene predefinido.
+    - Las propiedades del elemento respetan el marco de la ventana.
+    - No se sobrepone a ningun elemento padre ni hijo.
+*/
+div {position: static;}
+
+/*
+    - Relative: El elemento puede sobresalirse de los limites del elemento padre y de la ventana.
+    - El elemento se queda en una posición relativa fija con respecto a otro elemento.
+    - Las dimensiones relativas se suman a las statics (margin-left + left).
+
+*/
+div {position: relative; left: 2rem;}
+
+/*
+    - Se fija en relación al padre.
+    - fixed: Ancla el elemento en una posición de la ventana.
+    - z-index: numero, se puede traer el elemento al frente o atras dependiendo de la posición que este.
+    - Hay que indicarle en que posición de la ventana se va a anclar.
+    - Si se realiza scroll el elemento se mantiene en la zona.
+    - Solo ocupa el espacio del contenido del elemento.
+*/
+div {position: fixed; top: 0rem; left: 1px; z-index: 10;}
+
+/*
+    - absolute: Solo se mantiene por encima del elemento padre.
+    - Si se hace scroll desaparece.
+    - Hay que indicarle tambien la posición de ancla con respecto al padre.
+*/
+div {position: absolute;}
+
+/*
+    - Se fija en relación absolute a todos los elementos por encima de todos los elementos.
+    - sticky:
+    - se mantiene en una posición hasta que se hace scroll y se fija según el valor.
+    - z-index: numero_aquí; indica sobre que santidad de elementos se va a superponer.
+*/
+div{position:sticky; top: 0rem; z-index: 10}

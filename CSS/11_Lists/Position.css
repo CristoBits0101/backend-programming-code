@@ -1,0 +1,6 @@
+ul, ol 
+{
+    list-style: none;             /* Sin índice */
+    list-style-position: inside;  /* Índice dentro de la caja */
+    list-style-position: outside; /* Índice fuera  de la caja */
+}

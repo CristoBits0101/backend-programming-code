@@ -1,0 +1,4 @@
+I N V E S T I G A R:
+- Tuplas.
+- Math.
+- Tablas de Hashel.

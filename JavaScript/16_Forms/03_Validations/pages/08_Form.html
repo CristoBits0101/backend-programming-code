@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    
+    <style>
+
+        .error 
+        {
+            position: relative;
+        }
+
+        .error::after 
+        {
+            position:absolute;
+            top:0;
+            left:90%;
+            content:"X";
+            color:white;
+            font-size:1em;
+            text-align:center;
+            line-height:25px;
+            display:inline-block;
+            width:25px;
+            height:25px;
+            background-color:red;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Inputs a validar -->
+    <div>
+        <label>Id</label> 
+        <input type="text" class="borrar obligatorio" id="txtId"/>
+    </div>
+
+    <div>
+        <label>Nombre</label>
+        <input type="text" class="borrar obligatorio" id="txtNombre"/>
+    </div>
+   
+    <div>
+        <label>Apellido1</label>   
+        <input type="text" class="borrar obligatorio" id="txtApellido"/>
+    </div>
+    
+    <!-- Botón de enviar -->
+    <button type="button" onclick="add()" class="btn btn-default">Add</button>
+
+    <script>
+
+        // 1. Se ejecuta la función que válida el formulario.
+        function validaFormulario() 
+        {
+            // 2. ValídateFormulario está en true mientras no haya errores. 
+            var exito      = true;
+            
+            // 3. Obtenemos los valores de la clase obligatorio.
+            var controles  = document.getElementsByClassName("obligatorio");
+
+            // 4. Contamos la longitud del array.
+            var ncontroles = controles.length;
+
+            // 5. Recorremos el array que almacena el valor de las clases.
+            for (var i = 0; i < ncontroles; i++) 
+            {
+                // 6. Si está vacia retornamos false y pasamos un error a la función.
+                if (controles[i].value == "") 
+                {
+                    exito = false;
+
+                    /** 
+                     *  1. Obtiene el nodo del elemento del array.
+                     *  2. Referenciamos al atributo clase.
+                     *  3. La referenciamos una clase de CSS.
+                     */
+                    controles[i].parentNode.classList.add("error");
+                }
+
+                // 7. Si no removemos el error.
+                else 
+                {
+                    controles[i].parentNode.classList.remove("error");
+                }
+            }
+
+            // 8. Retornamos el valor de exito si es true o false.
+            return exito;
+        };
+
+        function add() 
+        {
+            if(validaFormulario())
+            {
+                alert('Pa lante')
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>

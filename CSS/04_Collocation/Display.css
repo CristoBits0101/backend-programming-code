@@ -1,0 +1,30 @@
+/*
+    - Display block.
+    - Hace que ocupe todo el ancho de la línea del padre.
+*/
+div 
+{
+    display: block;
+}
+
+/*
+    - Display inline.
+    - Pone los elementos uno al lado de otro.
+    - Ocupan solo su ancho definido.
+    - No funcionan con bloques solo con elementos sin alto.
+    - Permite flotar sin desbordar.
+*/
+span 
+{
+    display: inline;
+}
+
+/*
+    - Display inline-block.
+    - Pone los elementos uno al lado de otro.
+    - Ocupan el ancho y el alto definido.
+*/
+div
+{
+    display: inline-block;
+}

@@ -1,0 +1,1 @@
+1 -> Cuando user livewire: Añadir los estilos y los scripts de livewire a las vistas o crear un layaout e importarlo.

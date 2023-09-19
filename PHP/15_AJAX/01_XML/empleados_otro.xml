@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<departamento nombre="Marketing" jefeDep="e101">
+    <empleado codEmple="e101">
+        <nombre>Ana</nombre>
+        <apellidos>Pérez Santana</apellidos>
+        <direccion>Calle Falsa 123</direccion>
+        <edad>28</edad>
+         <carnetConducir></carnetConducir>
+    </empleado>
+    <empleado codEmple="e102">
+        <nombre>Antonio</nombre>
+        <apellidos>Miguel García</apellidos>
+        <direccion>Otra Calle Falsa 456</direccion>
+        <edad>32</edad>
+        <carnetConducir></carnetConducir>
+    </empleado>
+</departamento>

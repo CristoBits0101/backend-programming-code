@@ -1,0 +1,14 @@
+/*
+    - Internet Explorer
+    - Degradaciones, desenfocados, sombras, etc...
+    - Para lograr la transparencia hay que aplicar el filtro alpha, con valores entre 0 y 100.
+*/
+#elemento 
+{
+    background: white;
+    width: 200px;
+    height: 200px;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}

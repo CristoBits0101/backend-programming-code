@@ -1,0 +1,21 @@
+/* La imagen aparece sólo una vez */
+div#cuerpo
+{
+    background-image: url(fondo.gif);
+    background-repeat: no-repeat; 
+}
+
+/* La imagen se repetirá a lo ancho (horizontalmente) tantas veces como necesite. */
+div.horiz 
+{
+    background-image: url(imagen.gif);
+    background-repeat: repeat-x; 
+}
+   
+/* La imagen de fondo se repetirá a lo largo del documento (verticalmente). */
+div.vert 
+{
+    background-image: url(imagen.gif);
+    background-repeat: repeat-y; 
+}
+   
