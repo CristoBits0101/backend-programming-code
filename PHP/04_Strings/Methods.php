@@ -44,8 +44,8 @@
 
     echo "\n";
 
-    echo ltrim(                 // Elimina Cristo del texto.
-        $texto, "Cristo"
+    echo ltrim(                 // Elimina los espacios y los caracteres "H" y "o" del principio de una cadena.
+        $texto, "Ho"
     );
 
 ?>
