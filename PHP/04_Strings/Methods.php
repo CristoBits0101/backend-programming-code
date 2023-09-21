@@ -46,6 +46,6 @@
 
     echo ltrim(                 // Elimina Cristo del texto.
         $texto, "Cristo"
-    ); //
+    );
 
 ?>
