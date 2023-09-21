@@ -1,9 +1,9 @@
 <?php
 
+    // Las constantes de PHP deben ser valores escalares, es decir, valores que no son objetos, arreglos o funciones. 
+    // En este caso, el valor de la constante es una cadena de caracteres con espacios, lo que la convierte en un objeto.
     define("LIMITE", 1000);  // Constantes.
-    echo
-    "<p>El limite es: "
-    . LIMITE . "</p>";
+    echo "<p>El limite es: " . LIMITE . "</p>";
 
     $bool = True;            // Tipo booleano.
     
