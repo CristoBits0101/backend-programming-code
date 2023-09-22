@@ -48,4 +48,6 @@
         $texto, "Ho"
     );
 
+    list($horaInicio, $horaFin) = explode('-', $rango);
+
 ?>

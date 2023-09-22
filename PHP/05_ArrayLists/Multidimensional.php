@@ -38,6 +38,25 @@
         ["nombre" => "juan", "edad" => 22, "peso" => 75]
     ];
 
+    $horarios = [
+        "lunes" => [
+            "08:00-08:55" => "MarR - DEW - G201",
+            "08:55-09:50" => "MarR - DEW - G201",
+            "09:50-10:45" => "MarM - DPL - G201",
+            "11:15-12:10" => "SerR - DSW - G201",
+            "12:10-13:05" => "MarV - DOR - G201",
+            "13:05-14:00" => "MarV - DOR - G201",
+        ],
+        "martes" => [
+            "08:00-08:55" => "MarR - DEW - G201",
+            "08:55-09:50" => "MarR - DEW - G201",
+            "09:50-10:45" => "MarV - DOR - G201",
+            "11:15-12:10" => "MarV - DOR - G201",
+            "12:10-13:05" => "SerR - DSW - G201",
+            "13:05-14:00" => "SerR - DSW - G201",
+        ],
+    ];
+
     print "<p>{$datos[1]["nombre"]} pesa {$datos[1]["peso"]} kilos</p>\n";
     print "\n";
     print "<p>" . $datos[0]["nombre"] . " tiene " . $datos[0]["edad"] . " años</p>\n";
