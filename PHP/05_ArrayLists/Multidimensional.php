@@ -38,6 +38,10 @@
         ["nombre" => "juan", "edad" => 22, "peso" => 75]
     ];
 
+    print "<p>{$datos[1]["nombre"]} pesa {$datos[1]["peso"]} kilos</p>\n";
+    print "\n";
+    print "<p>" . $datos[0]["nombre"] . " tiene " . $datos[0]["edad"] . " años</p>\n";
+
     $horarios = [
         "lunes" => [
             "08:00-08:55" => "MarR - DEW - G201",
@@ -57,9 +61,13 @@
         ],
     ];
 
-    print "<p>{$datos[1]["nombre"]} pesa {$datos[1]["peso"]} kilos</p>\n";
-    print "\n";
-    print "<p>" . $datos[0]["nombre"] . " tiene " . $datos[0]["edad"] . " años</p>\n";
+    foreach ($horarios as $dia => $clases) {
+        echo "Día: $dia\n";
+        foreach ($clases as $horario => $materia) {
+            echo "Hora: $horario, Materia: $materia\n";
+        }
+        echo "\n"; // Agregar una línea en blanco para separar los días
+    }
 
     /**
      *  - Tridimensional Indexada.

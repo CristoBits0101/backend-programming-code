@@ -4,6 +4,8 @@
 -->
 <?php
 
+    global $totalOperaciones; $totalOperaciones++;
+
     echo "Ruta dentro de htdocs: "      . $_SERVER['PHP_SELF']        . "<br>";
 
     echo "Nombre del servidor:   "      . $_SERVER['SERVER_NAME']     . "<br>";
