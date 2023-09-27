@@ -37,7 +37,14 @@
     </li>
     <li>
         git log                         <!-- Permite ver el historial de commit                                 -->
+        git log --online                <!-- Muestra los commits en línea sin descripción de usuario            -->
         q                               <!-- Permite salir del modo git log                                     -->
+    </li>
+    <li>
+        git diff                        <!-- Muestra las diferencias realizadas en archivos no comiteados       -->
+    </li>
+    <li>
+        git status                      <!-- Muestra la rama y los cambios pendientes                           -->
     </li>
     <li>
         git tag v1.0commit_id           <!-- Pone una etiqueta corta a un commit y guarda el estado de la rama  -->
@@ -52,19 +59,38 @@
         git push                        <!-- Después de hacer el primer push se puede hacer así                 -->
     </li>
     <li>
+        git pull                        <!-- Descarga los cambios del repositorio remoto                        -->
+        git pull origin nomnbre_rama    <!-- Descarga una rama remota que aun no está en mi repositorio         -->
+    </li>
+    <li>
         git checkout v1.0               <!-- Permite moverse entre ramas y viajar a etiquetas                   -->
+        git checkout -b nombre rama     <!-- Cambia de rama y si no existe la crea                              --> 
     </li>
     <li>
+        git branch nomnbre_rama         <!-- Crea una rama desde cierto commit                                  -->
+        git branch nomnbre_rama 3bh2    <!-- Crea una rama desde un commit presente, pasado o futuro            -->
+        git branch                      <!-- Muestra la rama en la que estamos y todas las demas ramas          -->
         git branch --l                  <!-- Lista todas las ramas locales                                      -->
-    </li>
-    <li>
-        git revert commit_id            <!-- Revierte todas las modificaciones posteriores a cierto commit      -->
     </li>
     <li>
         git rm file_name                <!-- Borra un fichero del proyecto                                      -->
         git commit -am "sfdf"           <!-- Confirmamos los cambios en la rama local para que se apliquen      -->
     </li>
     <li>
-        git reset --hard                <!-- Revierte todo lo que no haya sido comiteado                        -->
+        git revert commit_id            <!-- Revierte de un commit a otro sin toca historial de commits         -->
+    </li>
+    <li>
+        git reset --hard                <!-- Revierte de un commit a otro incluido el historial                 -->
+        git reset --hard HEAD~2         <!-- Revierte todo los cambios y historial de la cabecera 2 posiciones  -->
+        git reset --soft                <!-- Revierte el historial de la cabecera de un commit a otro           -->
+        git reset --soft HEAD~2         <!-- Revierte el historial de la cabecera 2 posiciones                  -->
+    </li>
+    <li>
+        git bisect start                <!-- Comenzamos a buscar bugs                                           -->
+        git bisect good sdfsdf34        <!-- Marcamos el commit que estaba bien antés del bug                   -->
+        git bisect bad  jh453           <!-- Marcamos el commit que estaba mal                                  -->
+    </li>
+    <li>
+        git blame mifichero.txt         <!-- Muestra quien a hecho cada cambio en el fichero                    -->
     </li>
 </ol>
