@@ -109,4 +109,43 @@
     <li>
         git blame mifichero.txt         <!-- Muestra quien a hecho cada cambio en el fichero                    -->
     </li>
+    <li>
+        git stash                       <!-- Salvaguarda archivos no terminados de editar en un área específica -->
+        git stash apply                 <!-- Aplica los cambios salvaguardados en los archivos no comiteados    -->
+        git stash clear                 <!-- Se usa despúes de los apply para poder crear nuevos stash          -->
+        git stash List                  <!-- Muestra los stash salvaguardados                                   -->
+        git stash save                  <!-- Crea un stash con un mensaje informativo                           -->
+        git stash pop                   <!-- Devuelve los cambios salvaguardados de 1 a 1                       -->
+    </li>
+    <li>
+        git cherry-pick 234dsf          <!-- Mete un commit de una rama en el head de la rama main              -->
+        git cherry-pick 234dsf 342d     <!-- Mete varios commit de una rama en el head de la rama main          -->
+        git herry-pick 324drd^..h34g    <!-- Aplica un rango de commits en la rama main, incluye los 2          -->
+        git herry-pick 324drd..h34g     <!-- Aplica un rango de commits en la rama main, sin incluir los 2      -->  
+    </li>
+    <li>
+        workflow                        <!-- update -> change -> review -> commit -->
+        workflow                        <!-- git pull -> git fetch -> edit -> git diff -> git commit -am ""     -->
+    </li>
+    <li>
+        Fork                            <!-- Clona un repositorio ajeno en mi cuenta de GitHub                  -->
+        Pull request                    <!-- Crea una pull request para ofrecerle los cambios al dueño de app   -->
+        Merge pull request              <!-- El dueño del repositorio puede mergear los cambios                 -->
+    </li>
+                                        <!-- Hay hooks para casi todos los comandos y al envíar al serve side   -->
+    <li>
+        ruta hooks                      <!-- Esta en .git/hooks, descomentar el a usar y añadir acción          -->
+    </li>
+    <li>
+        hook de pre-commit              <!-- Al descomentar el .sample de los hook se activa sobre los commit   -->
+    </li>
+    <li>
+        hook prepare-commit             <!-- Altera el texto de los commits                                     -->
+    </li>
+    <li>
+        hook commit-msg                 <!-- Confirma que eres autor de un código y da error en texto duplicado -->
+    </li>
+    <li>
+        hook post-commit                <!-- Se ejecuta despúes del commit y se usa para enviar correos         -->
+    </li>
 </ol>
