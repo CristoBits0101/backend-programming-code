@@ -15,11 +15,17 @@
     echo ($edad >= 20 ? 'Pasa' : 'Fuera') ?  'Bien' : 'Mal';
 
     // Ternaries type switch 1.
-         $a  ==  1 ? 'uno' 
-    :  ( $a  ==  2 ? 'dos' 
-    :  ( $a  ==  3 ? 'tres' 
-    :  ( $a  ==  4 ? 'cuatro' 
-    :  'otro' ) ) );
+        $a  ==  1 ? 'uno' :  
+        ( 
+            $a  ==  2 ? 'dos' :  
+            ( 
+                $a  ==  3 ? 'tres' :  
+                ( 
+                    $a  ==  4 ? 'cuatro' :  
+                    'otro' 
+                ) 
+            ) 
+        );
     
     // Ternaries type switch 2.
     ( ( ( $a  ==  1   ? 'uno' 
