@@ -3,18 +3,44 @@
             npm install -g sass
 
     Paso 2) Crear el fichero Sass:
-            style.sass -> Sintaxis propia.
-            style.scss -> Sintaxis css.
+            style.sass                                          -> Sintaxis propia.
+            style.scss                                          -> Sintaxis CSS.
 
     Paso 3) Crear el HTML a estilar:
             index-example.html
 
     Paso 4) Añadir estilos a Sass:
-            body {
-                background-color: #ccc;
+            @use "styles2";                                     -> Importaciones.
+
+            $color-principal: #ccc;                             -> Variables.
+
+            body {                                              -> Anidaciones.
+                .container {
+                    main {
+                        background-color: $color-principal;
+                    }
+                    aside {
+                        font family: arial, sans-serif;
+                    }
+                }
+            }
+
+            @mixin caja_personalizada($_fondo: white) {         -> Funciones.
+                background-color: $_fondo;
+                border: 3px, solid, black;
+            }
+
+            .caja {
+                @include caja_personalizada($_fondo: red);      -> Inclusiones.
+            }
+
+            .caja, caja-secundaria {
+                with: 400px + 100px                             -> Operadores.
             }
 
     Paso 5) Compilar el Sass a CSS:
-            sass --watch styles.sass styles.css
-            --watch -> cada vez que se guarde un cambio compila el sass a css.
+            sass --watch styles.sass styles.css                 -> --watch: Compila cada guardado de cambios.
+
+    Paso 6) Añadir el CSS al HTML:
+            <link rel="stylesheet" href="./styles.css">    
  -->
