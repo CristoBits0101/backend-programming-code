@@ -1,3 +1,5 @@
+// Itera sobre el objeto y llama a la función de callback especificada para cada propiedad del objeto.
+
 /**
  *  - ForEach no retorna nada, simplemente recorre las posiciones. 
  *  - Podemos añadir una función anonima para que ejecute instrucciones.

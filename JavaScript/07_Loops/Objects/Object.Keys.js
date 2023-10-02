@@ -1,3 +1,5 @@
+// Devuelve un array con los claves del objeto.
+
 const obj = {
     name: 'John',
     age: 30,

@@ -1,3 +1,5 @@
+// Devuelve un array con los valores del objeto.
+
 // Opción 1: TODAS LAS VERSIONES DE NODE.
 const obj = {
     name: 'John',
@@ -19,3 +21,14 @@ let objeto = {
 // console.log(Object.value(objeto, 'name', 'default'));       // Cristo.
 // console.log(Object.value(objeto, 'age', 'default'));        // 30.
 // console.log(Object.value(objeto, 'email', 'default'));      // Si la propiedad no existe, devuelve el valor por defecto.
+
+
+const object = {
+    nombre: "Crista",
+    edad: 31,
+    ciudad: "Madrid"
+  };
+  
+const values2 = object.values();
+
+console.log(values2); // ["Crista", 31, "Madrid"]

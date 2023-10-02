@@ -1,4 +1,4 @@
-// Filtrar lista de objetos.
+// Declaración de lista de objetos.
 const objectList = 
 [
     {nombre: Crista, edad: 31},
@@ -6,7 +6,7 @@ const objectList =
     {nombre: Cristi, edad: 33}
 ]
 
-// Limitando por edad.
+// Filtrar la lista de objetos limitando por edad.
 const personasMayores = objectList.filter(nameVariable => 
 {
     if (objectList.name > 32) {return true}
