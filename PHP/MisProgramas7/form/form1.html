@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios UT2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: 2% auto;
+            padding: 2%;
+            border: 1px solid darkgray;
+            background-color: lightgray;
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        label {
+            width: 20%;
+        }
+        input {
+            width: 80%;
+            float: right;
+        }
+        .disponibilidad {
+            display: flex;
+        }
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cristo Rubén Pérez Suárez</h1>
+        <br/>
+        <form action="./recibe-formulario.php" method="post">
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="">
+            </div>
+            <br/>
+            <div>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <br/>
+            <div>
+                <label for="repeatPassword">Confirme su contraseña:</label>
+                <input type="password" id="repeatPassword" name="repeatPassword">
+            </div>
+            <br/>
+            <fieldset>
+                <legend>Selecciona los puestos de interés:</legend>
+                <br/>
+                <div>
+                    <input type="checkbox" id="desing" name="job[]" checked />
+                    <label for="desing">UX/UI Design</label>
+                </div>
+                <br/>
+                <div>
+                    <input type="checkbox" id="developer" name="job[]" />
+                    <label for="developer">Full-Stack Engineer</label>
+                </div>
+                <br/>
+                <div>
+                    <input type="checkbox" id="devops" name="job[]" />
+                    <label for="devops">DevOps</label>
+                </div>
+                <br/>
+                <div>
+                    <input type="checkbox" id="cloud" name="job[]" />
+                    <label for="cloud">Cloud Solutions Architect</label>
+                </div>
+                <br/>
+                <div>
+                    <input type="checkbox" id="data" name="job[]" />
+                    <label for="data">Data Science</label>
+                </div>
+                <br/>
+            </fieldset>
+            <br/>
+            <div class="disponibilidad">
+                <p>Disponibilidad:<span>&nbsp;</span></p>
+                <select name="incorporation" title="Fecha de incorporación">
+                    <option value="immediate">Inmediata</option>
+                    <option value="days" selected>15 días</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
