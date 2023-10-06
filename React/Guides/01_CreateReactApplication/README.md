@@ -12,7 +12,7 @@ npm init -y
 npm create vite@latest
     - Proyect name: nombre-de-la-app
     - React
-    - JavaScript + SWC
+    - JavaScript + SWC                  // SWC es un compilador de JSX a JS más potente.
 
 # PASO 3) INSTALAR LAS DEPENDENCIAS DE NODE PARA PODER TENER UN SERVIDOR PARA LA APP
 

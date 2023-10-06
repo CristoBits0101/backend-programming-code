@@ -21,7 +21,9 @@ const botton = React.createElement{'button', {"data ID": 123}, button 1};       
 root.render('Hello, World!');
 
 # PASO 4) RENDERIZAR VARIOS ELEMENTOS EN UN ELEMENTO
+
 const div = React.createElement(React.Fragment, null, [button1, button2, button3]);
 
-# RESUMEN
-        App.jsx <-  ->
+# MAIN RENDERIZA EL RETORNO DE LA FUNCIÓN APP DEL ARCHIVO APP DENTRO DEL ELEMENTO CON ID ROOT DE INDEX.HTML
+
+App.jsx <- main.jsx -> index.html
