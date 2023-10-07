@@ -92,7 +92,6 @@ const App = () => {
 
 
 
-
 # 7. AÑADIR IDENTIFICADORES A LOS ELEMENTOS
 
 const MyComponent = () => {
@@ -161,11 +160,15 @@ const MyComponent = ({children}) => {
   return <div className={twitter-style}>{children}</div>
 };
 
+
+
 # 9. DEFINIR UN VALOR BASE A LA PROP POR SI NO NOS LLEGAN DATOS
 
 const MyComponent = ({name = "Cristo"}) => {
   return <div className={user-style}>{name}</div>
 };
+
+
 
 # 10. AÑADIR IMAGENES A LOS COMPONENTES
 
@@ -189,6 +192,8 @@ const imgUrl = `https://google/img/${img}`;
 
 <img alt="fotoDinámica" src={imgUrl}>
 
+
+
 # 11. RENDERIZADO CONDICIONAL
 
 const isfollowing = true
@@ -200,3 +205,26 @@ const text = isfollowing
 const buttonClassName = isfollowing 
   ? 'styleLight is-following'
   : 'styleBlack'
+
+
+
+# 12. RENDERIZAR UNA LISTA
+
+<section className="participantes">       // Elemento en el que vamos a renderizar elementos.
+  {                                       // Abrimos llaves para introducir código mediante expresiones.
+    users.map(                            // Mapeamos la lista de usuarios.
+      user => {                           // Almacenamos los valores de cada posición de la lista en la variable user.
+        const [userId, userEmail] = user  // Extraemos los datos del objeto de la posición en variables independientes.
+        return (                          // Retornamos el componente añadiendo a las props los valores del objeto.
+          <TwitterFollowCard  
+            key={userId}                  // Añadimos una clave única para ayudar a React a identificar elementos en la lista.
+            userId={userId}
+            userEmail={userEmail}
+          >
+            {name}
+          </TwitterFollowCard>
+        )
+      }                      
+    )
+  }
+</section>
