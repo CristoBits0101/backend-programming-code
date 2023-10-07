@@ -188,3 +188,15 @@ const MyComponent = ({name = "Cristo"}) => {
 const imgUrl = `https://google/img/${img}`;
 
 <img alt="fotoDinámica" src={imgUrl}>
+
+# 11. RENDERIZADO CONDICIONAL
+
+const isfollowing = true
+
+const text = isfollowing 
+  ? 'Siguiendo' 
+  : 'Seguir'
+
+const buttonClassName = isfollowing 
+  ? 'styleLight is-following'
+  : 'styleBlack'
