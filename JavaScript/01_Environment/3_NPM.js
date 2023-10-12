@@ -12,10 +12,12 @@
         - license: ISC by defect, change if necessary
         - main: index.js
 
-    2. npm init -y         : Sin configurar los parámetros. 
+    2. npm init -y                      : Sin configurar los parámetros. 
 
-    3. Ejecutar un archivo : node file_name:
+    3. Ejecutar un archivo              : node file_name
 
-    4. Ejecutar un script  : npm script_name:
+    4. Ejecutar un script               : npm script_name
+
+    5. npm install --global http-server : Permite ejecutar un servidor HTTP básico para servir archivos estáticos.
 
 */
