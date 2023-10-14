@@ -11,4 +11,4 @@
         }
 
 1.3. Paso de parámetros mediante enlaces:
-        <a href="{{ route('note.edit', $note->id) }}">
+        <form method="POST" action="{{ route('note.update', $note->id) }}">
