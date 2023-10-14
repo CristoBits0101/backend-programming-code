@@ -27,5 +27,3 @@
 # PASO 14) AÑADE LAS DIRECTIVA @csrf
 
 # PASO 15) AÑADE LAS DIRECTIVA method('PUT')
-
-
