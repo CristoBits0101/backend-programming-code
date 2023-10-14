@@ -30,7 +30,7 @@
 3.3. Crea la plantilla index:                                        
         Laravel/01_landing-page/resources/views/landing/home.blade.php
 
-3.4. Reinicia el servidor PHP:                                       
+3.4. Reinicia el servidor PHP:
         Primero: ctrl+c
         Segundo: php artisan serve
 
