@@ -26,7 +26,7 @@ class AuthController extends Controller
             // Cada vez que el usuario nos pida algo nos tiene que entregar el token que le estamos dando para identificarlo.
             // Pertece al paquete de sanctum para la gestión de tokens, que nos permite crear tokens de usuario.
             // plainText es un formato de generación de tokens.
-            'token' => $user->createToken("API TOKEN")->plainTextToken,                
+            'token' => $user->createToken("API TOKEN")->plainTextToken,
         ], 200);
     }
 

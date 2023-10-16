@@ -1,27 +1,31 @@
 # PASOS PARA CREAR UNA API EN LARAVEL
 
-# PASO 1) CREAR LOS MODELOS Y LAS MIGRACIONES
+# PASO 01) CREAR LAS MIGRACIONES
 
-# PASO 2) CREAR LOS CONTROLADORES CON --RESOURCE
+# PASO 02) CREAR LOS MODELOS
 
-2.1. Añadir las funciones que hacén las consultas a la bd.
+# PASO 03) CREAR LAS RELACIONES
 
-2.2. Retornar en la función en el JSON con los datos de la consulta.
+# PASO 04) CREAR LAS RUTAS
 
-# PASO 3) CREAR LAS REQUEST PARA QUE VALIDEN LOS DATOS
+# PASO 05) CREAR LOS MIDDLEWARE
 
-# PASO 4) CREAR LOS RESOURCES PARA ESTABLECER UN FORMATO DE DEVOLUCIÓN DE JSON
+# PASO 06) CREAR LOS CONTROLADORES
 
-# PASO 5) CREAR LAS RUTAS EN EL ARCHIVO
+app\Http\Controllers\AuthController.php
 
-5.1. Entramos en el archivo de rutas para las API: 
-        Laravel\Practices\10_api-auth\routes\api.php
+# PASO 07) CREAR LAS FUNCIONES
 
-5.2. Añadimos las ruta que crea el CRUD completo:
-        Route::resource('/note', NoteController::class)
+# PASO 08) CREAR LAS CONSULTAS
 
-# PASO 6) CONFIGURAR PETICONES A LA API
+# PASO 09) CREAR LOS RETORNOS
 
-6.1. Configurar la cabecera para indicar que tipo de contenido vamos a enviar.
+# PASO 10) CREAR LAS REQUEST
 
-6.2. Configurar el body con los datos que tenemos que enviar.
+# PASO 11) CREAR LOS RESOURCES
+
+# PASO 12) CONFIGURAR PETICONES A LA API
+
+GET http:127.0.0.1:8000/api/user
+
+POST http:127.0.0.1:8000/api/create

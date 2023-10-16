@@ -6,12 +6,12 @@ npm install react-router-dom@latest
 
 main.jsx:
 
-import { BroserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
-  <BroserRouter>
+  <BrowserRouter>
     <App />
-  </BroserRouter>,
+  </BrowserRouter>
 )
 
 # PASO 3) 

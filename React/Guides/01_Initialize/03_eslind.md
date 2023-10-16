@@ -11,3 +11,7 @@ Open packeage.json
 Add: "eslintConfig": {
     "extends": "standard"
 }
+
+# PASO 4)
+
+npm run lint:standard
