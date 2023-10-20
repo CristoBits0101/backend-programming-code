@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-layout {
+    width: 80%;
+    background-color: red;
+    margin: 2% auto 0 auto;
+
+    /* 
+        - Este grid es una cuadrícula.
+    */
+    display: grid;
+
+    /* 
+        - Cada propiedad es una columna.
+        - Con esta propiedad se modifica el ancho de las columnas.
+        - La segunda ocupa el 15% del grid.
+        - Las columnas auto se reparten el espacio sobrante a partes iguales.
+    */
+    grid-template-columns: auto 15% 22% auto;
+
+    /*
+        - Cada propiedad equivale a cada una de las filas del grid.
+        - Con esta propiedad se modifica el alto de las columnas.
+    */
+    grid-template-rows: 100px 50px 200px;
+
+    /*
+        - Alinea las columnas.
+        - En este caso las columnas están al centro del grid.
+    */
+    justify-content: center;
+
+    /*
+        - Indica que cantidad de columnas ocupa un div en la fila.
+    */
+    grid-template-areas: 'cabecera cabecera'
+                         'menu menu'
+                         'contenido lateral'
+                         'footer footer';
+}
+
+.caja {
+    /*
+        - Cada div tendria un tamaño de 50px de ancho y alto dentro del grid.
+    */
+    width: 50px;
+    height: 50px; 
+    border: 2px solid black;
+    background-color: aqua;
+}
+
+.caja1 {
+    /*
+        - Se utiliza para indicar cuantas columnas se extiende una fila.
+        - La expansión se especifica mediante líneas.
+    */
+    grid-column: 1/4;
+
+    /*
+        - Se utiliza para indicar cuantas columnas se extiende una fila.
+        - La expansión se especifica mediante cajas.
+    */
+    grid-column: 1/ span 3;
+
+    /*
+        - Se utiliza para indicar cuantas filas se extiende una columna.
+    */
+    grid-row: 1/3;
+    width: auto;
+}

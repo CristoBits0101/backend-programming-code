@@ -1,26 +1,15 @@
-# PASO 1) IMPORTAR HOOKS
+# PASO 1) IMPORTAR STATE
 
-import {useState} from 'react'
+import { useState } from 'react'
 
-# PASO 2) DECLARAR HOOKS
+# PASO 2) DECLARAR STATE
 
-// Asignamos y un valor inicial a la variable que contiene el valor estado.
-// El valor se modifica a través de la función.
-const [isFollowing, setIsFollowing] = useState(false)
+const [name, setName] = useState("")
 
-# PASO 3) CAMBIAR EL VALOR A LAS PROPS CAMBIANDO EL ESTADO
+# PASO 3) MODIFICAR STATE
 
-// Le pasamos a la función el valor contrario de la variable isFollowing para que modifique la variable.
-const changeContentStyle = () => {
-  setIsFollowing(!isFollowing)      
-}
+<button onClick={() => setName("Cristo")}>
 
-<button className={buttonClassName} onClick={changeContentStyle}>
-  {text}
-</button>
+# PASO 4) IMPRIMIR STATE
 
-## OR
-
-<button className={buttonClassName} onClick={() => setName('Cristo')}>
-  {text}
-</button>
+<h1>{name}</h1>

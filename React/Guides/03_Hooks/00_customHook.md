@@ -1,29 +1,37 @@
 # OPCIÓN 1
 
-## Declaración del hook sin parámetros.
-const useCounter = () => {
+## NOMBRAR EL CUSTOM HOOK
+const useCounter = () => {                                  
+
+  ## DECLARAR EL STATE
   const [count, setCount] = useState(0);
 
+  ## RETORNO AL LLAMAR
   return {
     count,
-    increment: () => setCount((prevCount) => prevCount + 1),
+    increment: () => setCount((count) => count + 1),
   };
+
 };
 
+## IMPORTAR EL CUSTOM HOOK
 import React, { useState } from "react";
 import useCounter from "./useCounter";
 
-## Llamada al hook sin parámetros.
-const Counter = () => {
+function App() {
+  
+  ## INICIALIZAR EL CUSTOM HOOK
   const { count, increment } = useCounter();
-
+  
+  ## IMPRIMIR VALOR
+  ## INCREMENTAR VALOR
   return (
     <div>
       <h1>Contador: {count}</h1>
       <button onClick={increment}>Incrementar</button>
     </div>
   );
-};
+}
 
 # OPCIÓN 2
 
