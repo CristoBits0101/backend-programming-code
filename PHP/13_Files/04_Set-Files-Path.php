@@ -3,8 +3,8 @@
     // Save option 1.
     $moveUploadedFile = move_uploaded_file
     (
-        $_FILES["fichero"]["tmp_name"], 
-        $_SERVER['DOCUMENT_ROOT'] . "/imagenes/" . 
+        $_FILES["fichero"]["tmp_name"],
+        $_SERVER['DOCUMENT_ROOT'] . "/imagenes/" .
         $_FILES["fichero"]["name"]
     );
 
