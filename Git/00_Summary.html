@@ -21,6 +21,7 @@
         git config --list               <!-- Muestra las configuraciones                                        -->
         git config --list --global      <!-- Muestra la configuración global del usuario                        -->
         git config --list --local       <!-- Muestra la configuración local  del usuario                        -->
+        git config pull.rebase true     <!-- No muestra las uniones sobre una misma rama como bifurcaciones     -->
     </li>
     <li>
         git clone url_name              <!-- Para descargar un proyecto en un repositorio git                   -->
@@ -97,7 +98,7 @@
     </li>
     <li>
         git rm file_name                <!-- Borra un fichero del proyecto                                      -->
-        git commit -am "sfdf"           <!-- Confirmamos los cambios en la rama local para que se apliquen      -->
+        git commit -am "sfdf"           <!-- -m añadir mensaje, -a comitea solo los cambios y no lo nuevo       -->
     </li>
     <li>
         git revert commit_id            <!-- Revierte de un commit a otro sin toca historial de commits         -->

@@ -3,12 +3,12 @@
     // Save option 1.
     $moveUploadedFile = move_uploaded_file
     (
-        $_FILES["fichero"]["tmp_name"], 
-        $_SERVER['DOCUMENT_ROOT'] . "/imagenes/" . 
+        $_FILES["fichero"]["tmp_name"],
+        $_SERVER['DOCUMENT_ROOT'] . "/imagenes/" .
         $_FILES["fichero"]["name"]
     );
 
-    if ($moveUploadedFile) 
+    if ($moveUploadedFile)
     {
         echo "<br>Fichero guardado";
     } 
@@ -33,5 +33,13 @@
     {
         echo "<br>Error";
     }
+
+        // Save option 3.
+        $moveUploadedFile = move_uploaded_file
+        (
+            $_FILES["fichero"]["tmp_name"],
+            "./imagenes/" .
+            $_FILES["fichero"]["name"]
+        );
 
 ?>
