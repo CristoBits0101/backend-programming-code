@@ -12,6 +12,13 @@
 
     <link rel="stylesheet" href="./02_form-styles.css">
 
+    <style>
+        fieldset 
+        {
+            width: 96%;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -62,22 +69,28 @@
             <div>
                 <label>Extensión de los archivos:</label>
                 <div class="ext">
-                    <input type="checkbox" name="extensiones[]" value="txt"">⠀txt
+                    <label for="txt">txt</label>
+                    <input id="txt"type="checkbox" name="extensiones[]" value="txt"">
                 </div>
                 <div class="ext">
-                    <input type="checkbox" name="extensiones[]" value="pdf">⠀pdf
+                    <label for="pdf">pdf</label>
+                    <input id="pdf"type="checkbox" name="extensiones[]" value="pdf">
                 </div>
                 <div class="ext">
-                    <input type="checkbox" name="extensiones[]" value="docx">⠀docx
+                    <label for="docx">docx</label>
+                    <input id="docx"type="checkbox" name="extensiones[]" value="docx">
                 </div>
                 <div class="ext">
-                    <input type="checkbox" name="extensiones[]" value="xlsx">⠀xlsx
+                    <label for="xlsx">xlsx</label>
+                    <input id="xlsx"type="checkbox" name="extensiones[]" value="xlsx">
                 </div>
                 <div class="ext">
-                    <input type="checkbox" name="extensiones[]" value="pptx">⠀pptx
+                    <label for="pptx">pptx</label>
+                    <input id="pptx"type="checkbox" name="extensiones[]" value="pptx">
                 </div>
                 <div class="ext">
-                    <input type="checkbox" name="extensiones[]" value="odt">⠀odt
+                    <label for="odt">odt</label>
+                    <input id="odt" type="checkbox" name="extensiones[]" value="odt">
                 </div>
             </div>
             <br />
@@ -101,7 +114,7 @@
             <br />
             
             <!-- VISIBILIDAD -->
-            <fieldset style="width: 96%;">
+            <fieldset>
                 <legend>Selecciona la visibilidad</legend>
                 <div class="fieldsetInline">
                     <div class="radioButton">
@@ -119,19 +132,19 @@
             <!-- TEMÁTICA -->
             <div>
                 <div class="ext">
-                    <input type="checkbox" name="tematica[]" value="⠀administracion">⠀Administración
+                    <input type="checkbox" name="tematica[]" value="administracion">Administración
                 </div>
                 <div class="ext">
-                    <input type="checkbox" name="tematica[]" value="⠀finanzas">⠀Finanzas
+                    <input type="checkbox" name="tematica[]" value="finanzas">Finanzas
                 </div>
                 <div class="ext">
-                    <input type="checkbox" name="tematica[]" value="⠀negocio">⠀Negocio
+                    <input type="checkbox" name="tematica[]" value="negocio">Negocio
                 </div>
                 <div class="ext">
-                    <input type="checkbox" name="tematica[]" value="⠀informática">⠀Informatica
+                    <input type="checkbox" name="tematica[]" value="informática">Informatica
                 </div>
                 <div class="ext">
-                    <input type="checkbox" name="tematica[]" value="⠀otros">⠀Otros
+                    <input type="checkbox" name="tematica[]" value="otros">Otros
                 </div>
             </div>
             <br />
