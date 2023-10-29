@@ -174,7 +174,7 @@
 
                 <!-- Selector de opciones -->
                 <div class="disponibilidad">
-                    <p><b>Disponibilidad:<span>&nbsp;</b></span></p>
+                    <p><b>Disponibilidad:<span>&nbsp;</span></b></p>
                     <select 
                         name="incorporation" 
                         title="Fecha de incorporación"
