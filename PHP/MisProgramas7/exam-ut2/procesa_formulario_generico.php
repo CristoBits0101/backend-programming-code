@@ -11,7 +11,7 @@ foreach ($_REQUEST as $field => $value)                             // Recorremo
     else                                                            // Alertamos al usuario de los erróneos en los campos.
         echo "
             <script>
-                alert('Error en campo ', $field, ' no almacenado.')
+                alert('Error en campo $field no almacenado.')
             </script>";
 
 
