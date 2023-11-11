@@ -74,17 +74,21 @@
                                 $_field_name = trim($_text[1]);
                                 $_field_type = trim($_text[2]);
 
+                                $_field_name .= [];
+
                                 $_value_checkbox = explode(',', $_text[3]);
 
                                 echo $_field_data . '<br/><br/>';
 
                                 foreach($_value_checkbox as $_data)
                                 {
+                                    $_purified_data = trim($_data);
+
                                     echo "
                                         <input 
                                             name='$_field_name'
                                             type='$_field_type'
-                                            value='$_data' 
+                                            value='$_purified_data' 
                                         />
 
                                         $_data
@@ -94,7 +98,6 @@
                                 }
                             }
                         }
-
                     }
 
                     echo "
