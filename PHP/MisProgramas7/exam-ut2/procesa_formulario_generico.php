@@ -3,7 +3,7 @@
 $directory = "./files/";                                            // Carpeta que va almacenar los ficheros.
 
 $data = "";                                                         // Variable que recoge los datos del formulario.
-print_r($_REQUEST);
+
 foreach ($_REQUEST as $field => $value)                             // Recorremos los datos del formulario.
 
     if (isset($value) && !empty($value))                            // Recogemos los campos que pasen las validaciones.
