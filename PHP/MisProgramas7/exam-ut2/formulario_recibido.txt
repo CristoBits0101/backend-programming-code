@@ -1,21 +1,6 @@
-nombre - sergio
-apellidos - ramos
-isla - Gran Canaria
-sistemaoperativo - MacOS
-dni - ./ficheros/CristobalKDC.md
-certificado - ./ficheros/lesliemendoza.md
-
-nombre - sergio
-apellidos - ramos
-isla - Gran Canaria
-sistemaoperativo - MacOS
-dni - ./ficheros/CristobalKDC.md
-certificado - ./ficheros/lesliemendoza.md
-
-nombre - 
-apellidos - ramos
-isla - Gran Canaria
-sistemaoperativo - MacOS
-dni - ./ficheros/CristobalKDC.md
-certificado - ./ficheros/lesliemendoza.md
-
+nombre: asfasf
+apellidos: asfasf
+isla: Fuerteventura
+sistemaoperativo: Linux, Windows, MacOS
+dni: ./files/WhatsApp Image 2023-11-01 at 09.56.14.jpeg
+certificado: ./files/WhatsApp Image 2023-11-01 at 09.56.14.jpeg
