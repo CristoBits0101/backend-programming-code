@@ -106,6 +106,8 @@
                                 $_field_name = trim($_text[1]);
                                 $_field_type = trim($_text[2]);
 
+                                print_r($_field_name);
+
                                 $_value_checkbox = explode(',', $_text[3]);
 
                                 echo $_field_data . '<br/><br/>';
