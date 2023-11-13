@@ -39,7 +39,7 @@
                             $_field_name = $_field_name . '[]';
 
                             $_value_checkbox = explode(',', $_text[3]);
-
+                            
                             echo $_field_data . '<br/><br/>';
 
                             foreach($_value_checkbox as $_data)

@@ -1,70 +1,56 @@
 <?php
 
-    $directory = "./files/";                                            // Carpeta que va a almacenar los ficheros.
+    $data = "";                                                                                     // Recoge los datos.
+    $errors = "";                                                                                   // Recoge los errores.
 
-    $data = "";                                                         // Variable que recoge los datos del formulario.
-    
-    foreach ($_REQUEST as $field => $value)                             // Recorremos los datos del formulario.
+    foreach ($_REQUEST as $field => $value)                                                         // Validación de campos.
     {
-        if (isset($value) && !empty($value) && !is_array($field))       // Recogemos los campos que pasen las validaciones.
-            $data .= "$field: $value\n";
-
-        elseif (isset($value) && !empty($value) && is_array($field))    // Si una de las claves es un array cambiamos el formato de concatenación.
-        {
-            $data .= "$field: " . implode(', ', $value) . "\n";         // Convierte el array a una cadena y lo añade al archivo.
-        }
-
-        else                                                            // Alertamos al usuario de los erróneos en los campos.
-            echo "
-                <script>
-                    alert('Error en campo $field no almacenado.')
-                </script>";
+        if (!isset($value) || empty($value))
+            $errors = "<p>'Error en campo $field no almacenado.</p><br/>";
     }
 
-    foreach ($_FILES as $key => $file)                                  // Recorremos los datos de los ficheros.
+    foreach ($_FILES as $key => $file)                                                              // Validación de ficheros.
     {
-        $allowed_types = array("image/jpeg", "image/png", "image/gif"); // Validación del formato.
+        $allowed_types = array("image/jpeg", "image/png", "image/gif");
 
-        if (!in_array($file['type'], $allowed_types)) 
+        if (!in_array($file['type'], $allowed_types))                                               // Validación del formato.
         {
-            echo "
-                <script>
-                    alert('
-                        Error en campo $key: 
-                            Tipo de archivo no permitido.
-                    ')
-                </script>";
-
-            continue;                                                   // Salta a la siguiente iteración del bucle.
+            $errors .= "<p>Error en campo $key: Tipo de archivo no permitido.</p><br/>";
+            continue;
         }
 
-        $max_size = 2 * 1024 * 1024;                                    // Validación del tamaño del archivo (máximo 2 MB)
+        $max_size = 2 * 1024 * 1024;
 
-        if ($file['size'] > $max_size)                                  // Validación del tamaño. 
+        if ($file['size'] > $max_size)                                                              // Validación del tamaño.
         {
-            echo "
-                <script>
-                    alert('
-                        Error en campo $key: 
-                            El archivo supera el tamaño permitido.
-                    ')
-                </script>";
+            $errors .= "<p>Error en campo $key: El archivo supera el tamaño permitido.</p><br/>";
+            continue;
+        }
+    }
 
-            continue;                                                   // Salta a la siguiente iteración del bucle.
+    if (empty($errors))                                                                             // Comprobación de errores.
+    {
+        foreach ($_REQUEST as $field => $value)
+        {
+            if (isset($value) && !empty($value) && !is_array($value))
+                $data .= "$field: $value\n";
+
+            elseif (isset($value) && !empty($value) && is_array($value)) 
+                $data .= "$field: " . implode(', ', $value) . "\n";
         }
 
-        $file_name = $file["name"];                                     // Obtenemos el nombre de cada fichero.
+        foreach ($_FILES as $key => $file)
+        {
+            $data .= $key . ': ' . '/files/' . $file["name"] . "\n";
+            move_uploaded_file($file["tmp_name"], "./files/" . $file["name"]);                      // Almacenamiento de ficheros.
+        }
 
-        $data .= "$key: $directory$file_name\n";                        // Registramos la clave del campo y su ruta de almacenamiento.
+        $data .= "\n";
 
-        move_uploaded_file(                                             // Movemos el fichero de la ruta temporal a la ruta de ./$directory/$file_name
-            $file["tmp_name"],                      
-            $directory . $file_name
-        );
-    }                              
+        file_put_contents("formulario_recibido.txt", $data, FILE_APPEND);                           // Almacenamiento de datos.
+    }
 
-    $data .= "\n";
-
-    file_put_contents("formulario_recibido.txt", $data, FILE_APPEND);   // Almacenamos los datos recibidos en el fichero de destinado.
+    else
+        echo $errors;                                                                               // Comunicación de errores.
 
 ?>
