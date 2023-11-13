@@ -65,7 +65,12 @@
             $connection = connect_to_database();
 
             // Preparación de la consulta.
-            $stmt = $connection->prepare("INSERT INTO productos (Nombre, Precio, Imagen, Categoría) VALUES (:nombre, :precio, :imagen, :categoria)");
+            $stmt = $connection->prepare(
+                "INSERT INTO 
+                    productos (Nombre, Precio, Imagen, Categoría) 
+                VALUES 
+                    (:nombre, :precio, :imagen, :categoria)"
+            );
 
             // Purificación de datos.
             $nombre    = filter_var($_POST['nombre'], FILTER_UNSAFE_RAW);
@@ -84,7 +89,7 @@
             // Desplazamiento del fichero.
             move_uploaded_file($_FILES["imagen"]["tmp_name"], $imagePath);
 
-            // Cerramos la conexión.
+            // Cierra la conexión.
             $connection = null;
         }
 
@@ -166,11 +171,13 @@
                                 // Conecta a la base de datos.
                                 $connection = connect_to_database();
 
-                                // Preparamos la consulta.
-                                $sql_query = "SELECT id, nombre FROM Categorías";
-
-                                // Ejecutamos la consulta.
-                                $stmt = $connection->query($sql_query);
+                                // Ejecuta la consulta.
+                                $stmt = $connection->query(
+                                    "SELECT 
+                                        id, nombre 
+                                    FROM 
+                                        Categorías"
+                                );
 
                                 // Consulta exitosa.
                                 if ($stmt) 
@@ -179,9 +186,9 @@
 
                                 // Consulta no exitosa.
                                 else
-                                    echo '<option value="null">Las categorías no están disponibles</option>';
+                                    echo '<option value="null"> Las categorías no están disponibles </option>';
 
-                                // Cerramos la conexión.
+                                // Cierre de conexión.
                                 $connection = null;
                             ?>
                         </select>
