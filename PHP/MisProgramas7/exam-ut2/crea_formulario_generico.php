@@ -36,7 +36,6 @@
                             $_field_name = trim($_text[1]);
                             $_field_type = trim($_text[2]);
 
-                            // Convertimos el name de input en un array.
                             $_field_name = $_field_name . '[]';
 
                             $_value_checkbox = explode(',', $_text[3]);
