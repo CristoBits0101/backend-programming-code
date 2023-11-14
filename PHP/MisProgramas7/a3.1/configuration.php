@@ -21,7 +21,7 @@
 
             // Devuelve la conexión PDO.
             return $conn;
-        } 
+        }
     
         catch(PDOException $e) 
         {
