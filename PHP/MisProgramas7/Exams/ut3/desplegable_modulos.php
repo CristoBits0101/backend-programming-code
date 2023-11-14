@@ -29,9 +29,7 @@
 
     // 4. Recopilación.
     while ($row = $result->fetch())
-    {
         $modulos[$row['iniciales']] = $row['nombre_completo'];
-    }
 
 ?>
 
