@@ -6,7 +6,7 @@
         <title>Cristo Suárez UT1</title>
     </head>
     <body>
-        <?php                          
+        <?php
             if (file_exists("./estructura_formulario.cfg") == true && ($_file = fopen("./estructura_formulario.cfg", "r")) !== false) 
             {
                 while (($_line = fgets($_file)) !== false)

@@ -4,10 +4,8 @@
     $errors = "";                                                                                   // Recoge los errores.
 
     foreach ($_REQUEST as $field => $value)                                                         // Validación de campos.
-    {
         if (!isset($value) || empty($value))
             $errors = "<p>'Error en campo $field no almacenado.</p><br/>";
-    }
 
     foreach ($_FILES as $key => $file)                                                              // Validación de ficheros.
     {

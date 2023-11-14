@@ -1,15 +1,15 @@
 <?php
 
     // 1. Configuración.
-    $server   = "localhost";
-    $database = "ieselrincon";
-    $user     = "ouliden";
-    $password = "1234";
+    define("server",   "localhost");
+    define("database", "ieselrincon");
+    define("user",     "ouliden");
+    define("password", "1234");
 
     // 2. Conexión.
     try
     {
-        $connection = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
+        $connection = new PDO("mysql:host=$server; dbname=$database", $user, $password);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
@@ -19,17 +19,11 @@
     }
 
     // 3. Consulta.
-    $result = $connection->query
-    (
-        "SELECT
-            iniciales, nombre_completo
-        FROM
-            modulos"
-    );
+    $connection_result = $connection->query("SELECT iniciales, nombre_completo FROM modulos");
 
     // 4. Recopilación.
-    while ($row = $result->fetch())
-        $modulos[$row['iniciales']] = $row['nombre_completo'];
+    while ($row_data = $connection_result->fetch())
+        $modulos[$row_data['iniciales']] = $row_data['nombre_completo'];
 
 ?>
 
