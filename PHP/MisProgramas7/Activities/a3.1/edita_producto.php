@@ -157,17 +157,28 @@
                         $connection = connect_to_database();
 
                         // Preparación de la consulta.
+                        // Select tabla.columnas.
                         $stmt = $connection->prepare(
                             "SELECT 
-                                productos.Nombre, productos.Precio, productos.Imagen, Categorías.nombre 
-                            AS 
-                                CategoriaNombre, productos.id 
+                                productos.Nombre,
+                                productos.Precio,
+                                productos.Imagen,
+                                productos.id,
+                                Categorías.nombre AS CategoriaNombre,
+                                
+                            -- Tabla con la que va a trabajar.
                             FROM 
-                                productos 
+                                productos
+
+                            -- Trae todo lo de categorías relacionadas con productos.
                             INNER JOIN 
                                 Categorías 
+
+                            -- tabla.columna(Primary key) y tabla.columna(Foreign key).
                             ON 
-                                productos.Categoría = Categorías.id 
+                                productos.Categoría = Categorías.id
+
+                            -- Key que identifica la relación
                             WHERE 
                                 productos.id = :id"
                         );

@@ -6,63 +6,72 @@
         <title>Cristo Suárez UT1</title>
     </head>
     <body>
-        <?php                          
+        <?php
+            // Paso 1) Se comprueba si existe el archivo y si se puede abrir.
             if (file_exists("./estructura_formulario.cfg") == true && ($_file = fopen("./estructura_formulario.cfg", "r")) !== false) 
             {
+                // Paso 2) Se comprueba si se puede leer las líneas sin errores.
                 while (($_line = fgets($_file)) !== false)
                 {
-                    $_text = explode(';', $_line);
+                    // Paso 3) Se divide la línea a partir del caracter ; y se guarda como array en la variable text.
+                    $text = explode(';', $_line);
 
-                    foreach ($_text as $_value)
+                    // Paso 4) Se Recorre los datos de la línea para ver a qué tipo de input pertenece.
+                    foreach ($text as $_value)
                     {
-                        if (str_contains($_value, 'get') || str_contains($_value, 'post')) 
+                        // Paso 5) Se imprime los valores de la línea según su contenido.
+                        if (str_contains($_value, 'get') || str_contains($_value, 'post'))
                         {
-                            $_action = trim($_text[0]); 
-                            $_method = trim($_text[1]);
-                            echo "<form action='$_action' method='$_method' enctype='multipart/form-data'>\n";
+                            $action = trim($text[0]);
+                            $method = trim($text[1]);
+                            echo "<form action='$action' method='$method' enctype='multipart/form-data'>\n";
                         }
                         
                         elseif (str_contains($_value, 'text') || str_contains($_value, 'password') || str_contains($_value, 'email') || str_contains($_value, 'file'))
                         {
-                            $_field_data = trim($_text[0]);
-                            $_field_name = trim($_text[1]);
-                            $_field_type = trim($_text[2]);
-                            echo "$_field_data: </br> <input name='$_field_name' type='$_field_type'/> <br/><br/>";
+                            $field_data = trim($text[0]);
+                            $field_name = trim($text[1]);
+                            $field_type = trim($text[2]);
+                            echo "$field_data: </br> <input name='$field_name' type='$field_type'/> <br/><br/>";
                         }
 
                         elseif (str_contains($_value, 'checkbox'))
                         {
-                            $_field_data = trim($_text[0]);
-                            $_field_name = trim($_text[1]);
-                            $_field_type = trim($_text[2]);
+                            $field_data = trim($text[0]);
+                            $field_name = trim($text[1]);
+                            $field_type = trim($text[2]);
 
-                            $_field_name = $_field_name . '[]';
-
-                            $_value_checkbox = explode(',', $_text[3]);
+                            $field_name = $field_name . '[]';
                             
-                            echo $_field_data . '<br/><br/>';
+                            // Paso 6) Se divide la String de la posición 3 del array text en un nuevo array para obtener los valores de cada checkbox.
+                            $value_checkbox = explode(',', $text[3]);
+                            
+                            echo $field_data . '<br/><br/>';
 
-                            foreach($_value_checkbox as $_data)
+                            // Paso 7) Se recorre los valores del nuevo array para imprimirlos en el checkbox.
+                            foreach($value_checkbox as $_data)
                             {
-                                $_purified_data = trim($_data);
-                                echo "<input name='$_field_name' type='$_field_type' value='$_purified_data'/> $_data <br/><br/>";
+                                $purified_data = trim($_data);
+                                echo "<input name='$field_name' type='$field_type' value='$purified_data'/> $_data <br/><br/>";
                             }
                         }
 
                         elseif (str_contains($_value, 'radio'))
                         {
-                            $_field_data = trim($_text[0]);
-                            $_field_name = trim($_text[1]);
-                            $_field_type = trim($_text[2]);
+                            $field_data = trim($text[0]);
+                            $field_name = trim($text[1]);
+                            $field_type = trim($text[2]);
 
-                            $_value_checkbox = explode(',', $_text[3]);
+                            // Paso 6) Se divide la String de la posición 3 del array text en un nuevo array para obtener los valores de cada checkbox.
+                            $value_radio = explode(',', $text[3]);
 
-                            echo $_field_data . '<br/><br/>';
+                            echo $field_data . '<br/><br/>';
 
-                            foreach($_value_checkbox as $_data)
+                            // Paso 7) Se recorre los valores del nuevo array para imprimirlos en el checkbox.
+                            foreach($value_radio as $_data)
                             {
-                                $_purified_data = trim($_data);
-                                echo "<input name='$_field_name' type='$_field_type' value='$_purified_data'/> $_data <br/><br/>";
+                                $purified_data = trim($_data);
+                                echo "<input name='$field_name' type='$field_type' value='$purified_data'/> $_data <br/><br/>";
                             }
                         }
                     }
@@ -71,7 +80,7 @@
                 echo "<input type='submit' value='Submit'/>";
                 echo "</form>";
                 
-                fclose($_file);                                                   
+                fclose($_file);                                                
             }
             
             else echo "<script> alert('No se puedo leer el fichero.') </script>";

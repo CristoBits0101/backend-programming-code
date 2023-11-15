@@ -38,9 +38,12 @@
 
         <!-- 5. Serialización -->
         <h1>Editar Módulo.</h1>
-        <form action="">
-            <select name="" id="">
-
+        <form>
+            <select name="modulo" id="modulo">
+                <?php
+                    foreach($modulos as $clave => $valor)
+                        echo "<option value='".$clave."'>".$valor."</option>";
+                ?>
             </select>
         </form>
         
