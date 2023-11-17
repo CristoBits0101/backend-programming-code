@@ -21,11 +21,7 @@
 
             // Devuelve la conexión PDO.
             return $conn;
-<<<<<<< HEAD:PHP/MisProgramas7/Activities/a3.1/configuration.php
-        }
-=======
         } 
->>>>>>> 57fef1bcb4939472e6865c9d42bc0098319788ab:PHP/MisProgramas7/a3.1/configuration.php
     
         catch(PDOException $e) 
         {
