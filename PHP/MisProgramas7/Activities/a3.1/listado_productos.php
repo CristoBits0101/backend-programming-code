@@ -1,4 +1,20 @@
 <?php
+
+    session_start();
+
+    // Verifica si no hay una sesión activa.
+    if (!isset($_SESSION['user_id']))
+    {
+        // Se le comunica al usuario que para acceder al resto de páginas debe loguearse primero.
+        $_SESSION['session_inactiva'] = '¡Debe inicar sesión primero para poder usar nuestros servicios!';
+
+        // Redirige al usuario a la página de inicio de sesión.
+        header("Location: form_login.php");
+
+        // Asegura que el script se detenga después de la redirección.
+        exit; 
+    }
+
     // Paso 1) Importamos el archivo de configuración para poder conectarnos a la base de datos.
     require_once "./configuration.php";
 ?>
@@ -53,22 +69,22 @@
                             $conn = connect_to_database();
 
                             // Realiza una consulta SQL para obtener los datos de la tabla 'productos' con un JOIN en 'Categorías'.
-                            $sql = "SELECT     
-                                        productos.Nombre, 
-                                        productos.Precio, 
-                                        productos.Imagen, 
-                                        Categorías.nombre 
-                                    AS         
-                                        CategoriaNombre, 
-                                        productos.id 
-                                    FROM       
-                                        productos 
-                                    INNER JOIN 
-                                        Categorías 
-                                    ON         
-                                        productos.Categoría = Categorías.id";
-
-                            $stmt = $conn->query($sql);
+                            $stmt = $conn->query(
+                                "SELECT     
+                                    productos.Nombre, 
+                                    productos.Precio, 
+                                    productos.Imagen, 
+                                    Categorías.nombre 
+                                AS         
+                                    CategoriaNombre, 
+                                    productos.id 
+                                FROM       
+                                    productos
+                                INNER JOIN 
+                                    Categorías 
+                                ON         
+                                    productos.Categoría = Categorías.id"
+                            );
 
                             if ($stmt) 
                             {

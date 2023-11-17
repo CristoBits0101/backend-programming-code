@@ -1,6 +1,0 @@
-nombre: sadfffffffffffffffff
-apellidos: sdafsadfadfsadfasdfsadfsadf
-isla: Fuerteventura
-sistemaoperativo: Linux, Windows, MacOS
-dni: /files/cristo_foto.jpg
-certificado: /files/WhatsApp Image 2023-11-01 at 09.56.14.jpeg
