@@ -48,7 +48,7 @@
         git log                                         <!-- Permite ver el historial de commit                                 -->
         git log --all --full-history                    <!-- Muestra todos los logs                                             -->
         git log --oneline                               <!-- Muestra los commits en línea sin descripción de usuario            -->
-        git log --oneline --graph                       <!-- Añade las ramas de forma visual al historial                       -->
+        git log --graph --oneline --decorate            <!-- Añade las ramas de forma visual al historial                       -->
         q                                               <!-- Permite salir del modo git log                                     -->
     </li>
     <li>
@@ -104,6 +104,7 @@
     </li>
     <li>
         git revert commit_id                            <!-- Revierte de un commit a otro sin toca historial de commits         -->
+        git revert HEAD~1                               <!-- Revierte la cabecera de los commits x posiciones las que les digas -->
     </li>
     <li>
         git reset --hard                                <!-- Revierte de un commit a otro incluido el historial                 -->
