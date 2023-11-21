@@ -8,7 +8,7 @@
     <body>
         <?php
             // Paso 1) Se comprueba si existe el archivo y si se puede abrir.
-            if (file_exists("./estructura_formulario.cfg") == true && ($_file = fopen("./estructura_formulario.cfg", "r")) !== false) 
+            if (file_exists("./estructura_formulario.cfg") == true && ($_file = fopen("./estructura_formulario.cfg", "r")) !== false)
             {
                 // Paso 2) Se comprueba si se puede leer las líneas sin errores.
                 while (($_line = fgets($_file)) !== false)
