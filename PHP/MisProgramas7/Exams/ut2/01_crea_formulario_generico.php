@@ -77,7 +77,7 @@
                     }
                 }
 
-                echo "<input type='submit' value='Submit'/>";
+                echo "<input type='submit' name='submit' value='Submit'/>";
                 echo "</form>";
                 
                 fclose($_file);                                                
