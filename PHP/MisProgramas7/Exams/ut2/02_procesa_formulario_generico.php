@@ -9,7 +9,17 @@
 
     foreach ($_FILES as $key => $file)                                                              // Validación de ficheros.
     {
-        $allowed_types = array("image/jpeg", "image/png", "image/gif");
+         // Tipos.
+         $allowed_types = array(
+            "image/jpeg",                                                               // JPEG
+            "image/png",                                                                // PNG
+            "image/gif",                                                                // GIF
+            "application/pdf",                                                          // PDF
+            "text/plain",                                                               // TXT
+            "application/octet-stream",                                                 // CFG
+            "application/msword",                                                       // DOC
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"   // DOCX
+        );
 
         if (!in_array($file['type'], $allowed_types))                                               // Validación del formato.
         {
