@@ -8,46 +8,54 @@
 <body>
 
     <!-- Create -->
-    <p>Inser into</p>           <!-- Enviar formulario | Validar formulario | Ejecutar la consulta -->
+    <ol>
+        <li>
+            1. Enviar formulario    : $_SERVER["PHP_SELF"] | POST
+        </li>
+        <li>
+            2. Validar formulario   : $_SERVER['REQUEST_METHOD'] === 'POST' | foreach ($_REQUEST as $field => $value)
+        </li>
+        <li>
+            3. Ejecutar la consulta : INSERT INTO usuarios (nombre, apellido) VALUES ('Juan', 'Pérez');
+        </li>
+    </ol>
 
     <!-- Read -->
-    <p>Select</p>               <!-- Mostrar todos los productos -->
+    <ol>
+        <li>
+            1. Enviar formulario    : $_SERVER["PHP_SELF"] | GET
+        </li>
+        <li>
+            2. Validar formulario   : $_SERVER['REQUEST_METHOD'] === 'GET' | foreach ($_REQUEST as $field => $value)
+        </li>
+        <li>
+            3. Ejecutar la consulta : SELECT * FROM usuarios;
+        </li>
+    </ol>
 
     <!-- Update -->
     <ol>
-        <!-- id recibida -->
         <li>
-            Select id           <!-- Para previsualizar el producto -->
+            1. Enviar formulario    : $_SERVER["PHP_SELF"] | POST
         </li>
         <li>
-            Update id           <!-- Enviar formulario | Validar formulario | Ejecutar la consulta -->
-        </li>
-
-        <!-- id no recibida -->
-        <li>
-            Select *            <!-- Para que elija un producto -->
+            2. Validar formulario   : $_SERVER['REQUEST_METHOD'] === 'POST' | foreach ($_REQUEST as $field => $value)
         </li>
         <li>
-            Update id           <!-- Enviar formulario | Validar formulario | Ejecutar la consulta -->
+            3. Ejecutar la consulta : UPDATE usuarios SET apellido = 'García' WHERE nombre = 'Juan';
         </li>
     </ol>
     
     <!-- Delete -->
     <ol>
-        <!-- id recibida -->
         <li>
-            Select id           <!-- Para previsualizar el producto -->
+            1. Enviar formulario    : $_SERVER["PHP_SELF"] | POST
         </li>
         <li>
-            Update id           <!-- Enviar formulario | Validar formulario | Ejecutar la consulta -->
-        </li>
-
-        <!-- id no recibida -->
-        <li>
-            Select *            <!-- Para que elija un producto -->
+            2. Validar formulario   : $_SERVER['REQUEST_METHOD'] === 'POST' | foreach ($_REQUEST as $field => $value)
         </li>
         <li>
-            Update id           <!-- Enviar formulario | Validar formulario | Ejecutar la consulta -->
+            3. Ejecutar la consulta : DELETE FROM usuarios WHERE nombre = 'Juan' AND apellido = 'García';
         </li>
     </ol>
 

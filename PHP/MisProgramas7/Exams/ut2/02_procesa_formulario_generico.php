@@ -33,7 +33,7 @@
             if (isset($value) && !empty($value) && !is_array($value))
                 $data .= "$field: $value\n";
 
-            elseif (isset($value) && !empty($value) && is_array($value)) 
+            elseif (isset($value) && !empty($value) && is_array($value))
                 $data .= "$field: " . implode(', ', $value) . "\n";
         }
 
