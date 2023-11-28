@@ -1,3 +1,0 @@
-12345678F,"Margarita","Viera",+(82)12345678,123123123,test@TEST.com,(91)23456789,prueba@prueba.com
-12345678Z,"Pepe","Castellano",prueba@prueba.com,(952)333333,test@test.com,952333333,test@TEST.com
-44444444W,"Manuel","Luis",correo@correo.es,928000000,prueba@prueba.com,690111111,correito@correito.org
