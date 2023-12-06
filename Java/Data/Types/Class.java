@@ -1,4 +1,4 @@
-package Data.Identifiers.Types;
+package Data.Types;
 
 public class Class
 {

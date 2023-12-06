@@ -7,7 +7,7 @@ import java.util.Set;
  *    Advantages : Quick search, guarantees unique items.
  * Disadvantages : Does not guarantee a specific order.
  * */
-public class HashSet
+public class MyHashSet
 {
     public static void main(String[] args)
     {

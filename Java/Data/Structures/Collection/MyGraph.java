@@ -10,7 +10,7 @@ import java.util.Map;
  *    Advantages : Allows you to store additional information (values associated with the edges).
  * Disadvantages : It requires manually handling the logic of adding and removing nodes and edges.
  * */
-public class Graph
+public class MyGraph
 {
     public static void main(String[] args)
     {
@@ -24,7 +24,7 @@ public class Graph
         addEdge(graph, "B", "C");
 
         // Print initial state
-        System.out.println("Initial Graph:");
+        System.out.println("Initial MyGraph:");
         printGraph(graph);
 
         // Update operation
@@ -32,14 +32,14 @@ public class Graph
         updateEdge(graph, "B", "C", "D");
 
         // Print updated state
-        System.out.println("\nUpdated Graph:");
+        System.out.println("\nUpdated MyGraph:");
         printGraph(graph);
 
         // Delete operation
         deleteNode(graph, "B");
 
         // Print final state
-        System.out.println("\nFinal Graph:");
+        System.out.println("\nFinal MyGraph:");
         printGraph(graph);
     }
 

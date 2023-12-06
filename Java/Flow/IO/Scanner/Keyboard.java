@@ -1,6 +1,8 @@
+package Flow.IO.Scanner;
+
 import java.util.Scanner;
 
-public class Keyboard 
+public class Keyboard
 {
     public static void main(String[] args) 
     {

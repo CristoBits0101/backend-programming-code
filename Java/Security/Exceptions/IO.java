@@ -13,10 +13,9 @@ public class IO extends Throwable
         try
         {
             readInput();
-            System.out.println("Result: " + result);
         }
 
-        catch (java.io.IOException e)
+        catch (IOException e)
         {
             System.err.println("IOException caught: " + e.getMessage());
         }
@@ -28,7 +27,7 @@ public class IO extends Throwable
     }
 
     // 2. Function that throws an IOException
-    private static void readInput() throws IOException, java.io.IOException
+    private static void readInput() throws IOException
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 

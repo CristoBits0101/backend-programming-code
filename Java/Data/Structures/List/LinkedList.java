@@ -9,13 +9,19 @@ public class LinkedList
 {
     public static void main(String[] args)
     {
-        // Statement
+        // Create a linked list
         java.util.LinkedList<Double> LinkedList = new java.util.LinkedList<>();
 
-        // Operation
+        // Insert elements into the linked list
+        LinkedList.add(1.2);
+        LinkedList.add(3.4);
+        LinkedList.add(5.6);
 
+        // Insert an element at a specific position
+        LinkedList.add(2, 7.8);
 
-        // Iteration
-
+        // Iterate over the linked list
+        for (Double element : LinkedList)
+            System.out.println(element);
     }
 }

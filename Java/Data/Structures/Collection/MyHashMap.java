@@ -7,7 +7,7 @@ import java.util.Map;
  *    Advantages : Fast, efficient search for insertion and deletion operations.
  * Disadvantages : Does not guarantee a specific order.
  * */
-public class HashMap
+public class MyHashMap
 {
     public static void main(String[] args)
     {
