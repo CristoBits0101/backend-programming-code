@@ -3,8 +3,8 @@
     // Parámetros de conexión para la base de datos local.
     $servername = "localhost";
     $database = "ut4_exam";
-    $username = "mitiendaonline";
-    $password = "1234";
+    $username = "root";
+    $password = "";
 
     try
     {

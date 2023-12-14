@@ -3,8 +3,8 @@
     // Parámetros de conexión para la base de datos local.
     const SERVERNAME = "localhost";
     const DATABASE = "ut4_exam";
-    const USERNAME = "mitiendaonline";
-    const PASSWORD = "1234";
+    const USERNAME = "root";
+    const PASSWORD = "";
 
     try
     {
