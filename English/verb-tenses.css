@@ -1,0 +1,30 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    font-family: Google Sans;
+    font-weight: normal;
+}
+
+table 
+{
+    border-collapse:separate;
+    margin: 2% auto;
+}
+
+td, th 
+{
+    border: 0.1rem solid black;
+    padding: 1rem;
+}
+
+tr > td:first-child 
+{
+    text-align: right;
+}
+
+#empty 
+{
+    border: none;
+    color: white;
+}
