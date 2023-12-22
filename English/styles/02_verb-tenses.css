@@ -5,6 +5,8 @@
     font-family: 'Google Sans', sans-serif;
     font-weight: normal;
     text-align: center;
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
 table 
@@ -13,30 +15,38 @@ table
     margin: 2% auto;
 }
 
-tr:nth-child(odd) 
+th
 {
-    background-color: #f9f9f9;
+    background-color: #9A9EA5;
+    color: #FFFFFF;
 }
 
-tr td:first-child
+td 
 {
-    background-color: #e6e6e6;;
+    background-color: #F0F4F9;
 }
 
-th 
+td:first-child 
 {
-    background-color: #e6e6e6;;
+    background-color: #9A9EA5;
+    color: #FFFFFF;
 }
 
 th, td 
 {
-    border: 0.10rem solid black;
+    border: 0.10rem solid #000000;
     padding: 1rem;
 }
 
 .center 
 {
     text-align: center;
+}
+
+.space
+{
+    background-color: #FFFFFF !important;
+    border: none;
 }
 
 @media only screen and (max-width: 600px) 
