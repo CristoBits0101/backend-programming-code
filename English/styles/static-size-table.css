@@ -13,17 +13,20 @@ table
 {
     border-collapse: separate;
     margin: 2% auto;
+    width: 30%;
 }
 
 th
 {
     background-color: #9A9EA5;
     color: #FFFFFF;
+    width: 25%;
 }
 
 td 
 {
     background-color: #F0F4F9;
+    width: 25%;
 }
 
 td:first-child 
@@ -48,6 +51,11 @@ th, td
     background-color: #FFFFFF !important;
     border: none;
 }
+
+img {
+    max-width: 10rem;
+    border-radius: 1rem;
+  }
 
 @media only screen and (max-width: 600px) 
 {
