@@ -1,0 +1,17 @@
+* 
+{
+  font-family: 'Google Sans', sans-serif;
+  font-weight: normal;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+ul li 
+{
+  list-style: none;
+}
+
+span 
+{
+  font-weight: bold;
+}

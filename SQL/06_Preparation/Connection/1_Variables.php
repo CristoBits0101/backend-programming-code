@@ -6,12 +6,14 @@
     $username = "root";
     $password = "";
 
+    // Driver -> Host -> Database.
+    $dns = "mysql:host=" . $servername . ";dbname=" . $database;
+
     try
     {
         // Crea una conexión a la base de datos ut4_exam en un servidor localhost.
-        $connection = new PDO("
-            mysql:host=$servername;
-            dbname=$database",
+        $connection = new PDO(
+            $dns,
             $username,
             $password
         );
