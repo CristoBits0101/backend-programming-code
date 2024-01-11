@@ -2,7 +2,7 @@
 
     // Parámetros de conexión para la base de datos local.
     const SERVERNAME = "localhost";
-    const DATABASE = "ut4_exam";
+    const DATABASE = "ut3_examen_final";
     const USERNAME = "root";
     const PASSWORD = "";
 

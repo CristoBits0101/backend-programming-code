@@ -2,7 +2,7 @@
 
     // Parámetros de conexión para la base de datos local.
     $servername = "localhost";
-    $database = "ut4_exam";
+    $database = "ut3_examen_final";
     $username = "root";
     $password = "";
 
