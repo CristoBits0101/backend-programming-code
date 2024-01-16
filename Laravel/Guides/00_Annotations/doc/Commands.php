@@ -67,4 +67,16 @@
         27 -> Install Livewire          : composer require livewire/livewire
         28 -> Create element Livewire   : php artisan make:livewire "name"
     */
+    /*
+        29 -> Uncomment the extension=zip line in php.ini by removing the initial semicolon.
+
+        30 -> Install charts            : composer require consoletvs/charts
+        31 -> Config charts             : php artisan vendor:publish --tag=charts_config
+
+        32 -> Clean errors:
+                php artisan config:clear
+                php artisan clear-compiled
+                php artisan optimize
+                composer dump-autoload
+    */
 ?>
