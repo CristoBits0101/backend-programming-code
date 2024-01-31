@@ -79,4 +79,9 @@
                 php artisan optimize
                 composer dump-autoload
     */
+    /*
+        33 -> ChangeView                : php artisan make:command ChangeView
+
+    */
+    
 ?>
