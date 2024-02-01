@@ -17,6 +17,7 @@ return new class extends Migration
         // Crear tabla.
         Schema::create('notes', function(Blueprint $table){
             $table->id();
+            $table->char('codigo_sensor', 3);
             $table->string('title', 255);           // Tipo de dato + nombre de columna + longitud máxima.
             $table->string('token', 64)->unique();  // Debe ser único para poder ser almacenado en la BD.
             $table->text('abilities')->nullable();  // Textos largos, el valor del campo puede ser nulo.
