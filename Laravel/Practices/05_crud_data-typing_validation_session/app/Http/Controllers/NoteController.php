@@ -102,7 +102,7 @@ class NoteController extends Controller
     public function delete(Note $note):RedirectResponse
     {
         $note->delete();
-        return redirect()->route('note.index')->with('danger','Note deleted');;
+        return redirect()->route('note.index')->with('danger','Note deleted');
     }
 
 }
