@@ -1,7 +1,0 @@
-replace valeue of node
-doc("Bailes.xml")//bailes/baile[1]/Profesor
-with "Angel Correllada"
-,
-replece node
-doc("Bailes.xml")//bailes/baile[1]/Plazas
-with <Plazas>14<Plazas>

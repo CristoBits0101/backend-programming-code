@@ -1,3 +1,0 @@
-for $bailes in doc("Bailes.xml")//bailes/baile
-where $bailes/Sala = 1
-return $bailes/Nombre

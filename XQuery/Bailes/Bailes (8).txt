@@ -1,1 +1,0 @@
-delete node doc("Bailes.xml")//bailes/baile[@id=7]

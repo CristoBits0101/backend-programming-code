@@ -1,1 +1,0 @@
-doc("Cuadros.xml")//Cuadros/Cuadro/Autor[Nombre="Salvador"]

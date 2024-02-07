@@ -1,4 +1,0 @@
-for $bailes in doc("Bailes.xml")//bailes/baile
-let $profesor:=$nomBaile/Profesor
-where $nomBaile/Precio[@cuota="mensual"]
-return $profesor

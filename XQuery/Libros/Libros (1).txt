@@ -1,1 +1,0 @@
-doc("libros_con_dtd.xml")/libros/libro

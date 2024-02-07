@@ -1,4 +1,0 @@
-for $bailes in doc("Bailes.xml")//bailes/baile
-let $nombre_baile:=$bailes/Nombre
-where $bailes/Sala=2 and $bailes/Precio<35 and $bailes/Precio[@moneda="euro"]
-return data($nombre_baile)

@@ -1,3 +1,0 @@
-replace value of node
-doc("libros_con_dtd.xml"//libros/libro[1]/edicion
-with "3"

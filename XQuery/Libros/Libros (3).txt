@@ -1,3 +1,0 @@
-for $libros in doc("libros_con_dtd.xml")/libros/libro
-where $libros/numpaginas>400
-ruturn $libros/titulo

@@ -1,3 +1,0 @@
-for $libros in doc("libros_con_dtd.xml")/libros/libro
-where $libros/cod_libro>0
-return $libros/titulo

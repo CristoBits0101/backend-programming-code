@@ -1,1 +1,0 @@
-delete node doc("libros_con_dtd.xml")/libros/libro[cod_libro=10]
