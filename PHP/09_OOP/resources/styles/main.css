@@ -1,0 +1,38 @@
+main 
+{
+  width: 15%;
+  margin: 5% auto;
+  padding: 2%;
+  border-radius: 2.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(#002C5355, #002C5350, #002C5345);
+  transition: background-color 0.2s ease-in-out;
+  text-align: center;
+}
+
+form input 
+{
+  padding: 0.75rem;
+  border: 0;
+  border-radius: 2.5rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  color: #002C53;
+}
+
+input[type="submit"]
+{
+  cursor: pointer;
+  background-color: #002C53;
+  color: #FAFAFA;
+}
+
+p 
+{
+  font-size: 1rem;
+  color: #002C53;
+}
+
+.serialize
+{
+  text-align: left ;
+}

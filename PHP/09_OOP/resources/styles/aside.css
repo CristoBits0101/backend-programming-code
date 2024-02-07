@@ -1,0 +1,32 @@
+aside 
+{
+  width: 15%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+table 
+{
+  border-collapse: separate;
+  margin: 2% auto;
+  text-align: center;
+}
+
+th 
+{
+  background: linear-gradient(#002C5355, #002C5350, #002C5345);
+  
+}
+
+td 
+{
+  color: #002C53;
+  background-color: #f0f4f9;
+}
+
+th, td 
+{
+  border: 0.1rem solid #002C53;
+  padding: 1rem;
+}
