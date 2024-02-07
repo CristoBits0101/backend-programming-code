@@ -1,5 +1,0 @@
-<p>
-    SELECT c.email, COUNT(p.payment_id) AS num_pagos FROM payment p
-    INNER JOIN customer c on p.customer_id = c.customer_id
-    GROUP BY c.email
-</p>
