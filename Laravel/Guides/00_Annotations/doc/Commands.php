@@ -81,9 +81,9 @@
     */
     /*
         33 -> ChangeView                : php artisan make:command ChangeView
-        34 -> Storage link to public    : php artisan storage:link
-
-
+        34 -> Storage link to public    : 
+                php artisan storage:link
+                cmd /c mklink /D C:\Workspace\A6.5-A6.6\public\storage C:\Workspace\A6.5-A6.6\storage
     */
     
 ?>
