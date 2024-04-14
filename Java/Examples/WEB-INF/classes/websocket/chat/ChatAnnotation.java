@@ -40,7 +40,8 @@ public class ChatAnnotation {
 
     private static final String GUEST_PREFIX = "Guest";
     private static final AtomicInteger connectionIds = new AtomicInteger(0);
-    private static final Set<ChatAnnotation> connections = new CopyOnWriteArraySet<>();
+    private static final Set<ChatAnnotation> connections =
+            new CopyOnWriteArraySet<>();
 
     private final String nickname;
     private Session session;
@@ -48,6 +49,7 @@ public class ChatAnnotation {
     public ChatAnnotation() {
         nickname = GUEST_PREFIX + connectionIds.getAndIncrement();
     }
+
 
     @OnOpen
     public void start(Session session) {
@@ -57,24 +59,32 @@ public class ChatAnnotation {
         broadcast(message);
     }
 
+
     @OnClose
     public void end() {
         connections.remove(this);
-        String message = String.format("* %s %s", nickname, "has disconnected.");
+        String message = String.format("* %s %s",
+                nickname, "has disconnected.");
         broadcast(message);
     }
+
 
     @OnMessage
     public void incoming(String message) {
         // Never trust the client
-        String filteredMessage = String.format("%s: %s", nickname, HTMLFilter.filter(message.toString()));
+        String filteredMessage = String.format("%s: %s",
+                nickname, HTMLFilter.filter(message.toString()));
         broadcast(filteredMessage);
     }
+
+
+
 
     @OnError
     public void onError(Throwable t) throws Throwable {
         log.error("Chat Error: " + t.toString(), t);
     }
+
 
     private static void broadcast(String msg) {
         for (ChatAnnotation client : connections) {
@@ -90,7 +100,8 @@ public class ChatAnnotation {
                 } catch (IOException e1) {
                     // Ignore
                 }
-                String message = String.format("* %s %s", client.nickname, "has been disconnected.");
+                String message = String.format("* %s %s",
+                        client.nickname, "has been disconnected.");
                 broadcast(message);
             }
         }
