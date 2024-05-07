@@ -25,7 +25,7 @@ class NoteController extends Controller
         return response()->json([
             'success' => true,                                  
             // 'data' => $note       
-            'data' => new NoteResource($note )                            
+            'data' => new NoteResource($note)                            
         ], 201);                                                
     }
 
