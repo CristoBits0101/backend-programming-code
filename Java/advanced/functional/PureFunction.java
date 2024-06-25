@@ -1,12 +1,8 @@
 package advanced.functional;
 
-public class PureFunctions {
+public class PureFunction {
 
     private static int contador = 0;
-
-    public static void main(String[] args) {
-
-    }
 
     /**
      * Función pura porque siempre devuelve el mismo resultado.
