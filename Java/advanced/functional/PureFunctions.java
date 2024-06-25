@@ -1,6 +1,6 @@
 package advanced.functional;
 
-public class pure {
+public class PureFunctions {
 
     private static int contador = 0;
 
