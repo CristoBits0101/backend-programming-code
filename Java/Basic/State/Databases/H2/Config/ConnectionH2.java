@@ -1,4 +1,4 @@
-package Config;
+package basic.state.databases.h2.config;
 
 import java.sql.Connection;     //
 import java.sql.DriverManager;  //

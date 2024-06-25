@@ -1,4 +1,4 @@
-package Paradigms.POO.Object.Correlations.Automotive.Children;
+package basic.poo.object.correlations.automotive.children;
 
 import Paradigms.POO.Object.Correlations.Automotive.Assistant.Motor;
 import Paradigms.POO.Object.Correlations.Automotive.Parent.Vehicle;

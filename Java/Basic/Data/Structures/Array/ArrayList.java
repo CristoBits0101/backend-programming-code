@@ -1,4 +1,4 @@
-package Data.Structures.Array;
+package basic.data.structures.array;
 
 /**
  *           Use : Implements a dynamic list using an underlying array.

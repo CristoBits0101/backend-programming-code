@@ -1,4 +1,4 @@
-package Paradigms.POO.Object.Instantiate;
+package basic.poo.object.instantiate;
 
 import Paradigms.POO.Object.Instantiate.Class.Empty;
 import Paradigms.POO.Object.Instantiate.Class.Parameters;

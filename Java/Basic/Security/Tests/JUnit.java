@@ -1,1 +1,1 @@
-package Security.Tests;
+package basic.security.tests;

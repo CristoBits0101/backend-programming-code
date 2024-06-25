@@ -1,4 +1,4 @@
-package Flow.Conditionals;
+package basic.flow.conditionals;
 
 public class Ternary
 {

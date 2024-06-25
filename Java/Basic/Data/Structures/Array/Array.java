@@ -1,4 +1,4 @@
-package Data.Structures.Array;
+package basic.data.structures.array;
 
 import Paradigms.POO.Class.Generic.Class;
 

@@ -1,4 +1,4 @@
-package Paradigms.POO.Modifier.Encapsulation;
+package basic.poo.modifier.encapsulation;
 
 public class Private
 {

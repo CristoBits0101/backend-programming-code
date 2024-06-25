@@ -1,4 +1,4 @@
-package Paradigms.POO.Methods;
+package basic.poo.methods;
 
 public class Getters
 {

@@ -1,4 +1,4 @@
-package Data.Structures.Array;
+package basic.data.structures.array;
 
 /**
  *           Use : Similar to ArrayList but synchronized, meaning it is thread safe.

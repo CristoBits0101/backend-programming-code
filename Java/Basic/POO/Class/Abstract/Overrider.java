@@ -1,4 +1,4 @@
-package Paradigms.POO.Class.Abstract;
+package basic.poo.Class.Abstract;
 
 public class Overrider extends Abstraction
 {

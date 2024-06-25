@@ -1,4 +1,4 @@
-package Data.Structures.Collection;
+package basic.data.structures.collection;
 
 import java.io.File;
 import java.io.FileNotFoundException;

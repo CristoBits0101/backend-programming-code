@@ -1,4 +1,4 @@
-package Data.Structures.Collection;
+package basic.data.structures.collection;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,4 +1,4 @@
-package State.Files.Text;
+package basic.state.files.text;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

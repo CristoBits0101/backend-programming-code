@@ -1,4 +1,4 @@
-package Paradigms.POO.Object.Polymorphisms.Automotive.Parent;
+package basic.poo.object.polymorphisms.automotive.parent;
 
 public class Vehicle
 {

@@ -1,4 +1,4 @@
-package Data.Structures.List;
+package basic.data.structures.list;
 
 /**
  *           Use : Implements a doubly linked list.

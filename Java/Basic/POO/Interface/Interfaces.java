@@ -1,4 +1,4 @@
-package Paradigms.POO.Interface;
+package basic.poo.Interface;
 
 public interface Interfaces
 {

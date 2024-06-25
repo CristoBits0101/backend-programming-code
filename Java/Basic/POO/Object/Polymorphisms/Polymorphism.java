@@ -1,4 +1,4 @@
-package Paradigms.POO.Object.Polymorphisms;
+package basic.poo.object.polymorphisms;
 
 import Paradigms.POO.Object.Polymorphisms.Automotive.Children.Car;
 import Paradigms.POO.Object.Polymorphisms.Automotive.Children.Motorcycle;

@@ -1,4 +1,4 @@
-package Data.Types;
+package basic.data.types;
 
 public class Wrapper
 {

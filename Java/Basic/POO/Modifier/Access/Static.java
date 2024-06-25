@@ -1,4 +1,4 @@
-package Paradigms.POO.Modifier.Access;
+package basic.poo.modifier.access;
 
 public class Static
 {

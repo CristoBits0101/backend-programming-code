@@ -1,4 +1,4 @@
-package Paradigms.POO.Object.Polymorphisms.Automotive.Assistant;
+package basic.poo.object.polymorphisms.automotive.assistant;
 
 public class Motor {
 }

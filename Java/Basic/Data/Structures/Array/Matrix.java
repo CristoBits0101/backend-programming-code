@@ -1,4 +1,4 @@
-package Data.Structures.Array;
+package basic.data.structures.array;
 
 /**
  *           Use : Represents a two-dimensional structure of elements.

@@ -1,4 +1,4 @@
-package State.Databases.Hibernate;
+package basic.state.databases.hibernate;
 
 public class Write
 {

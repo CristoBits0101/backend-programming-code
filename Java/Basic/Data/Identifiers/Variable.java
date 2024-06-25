@@ -1,4 +1,4 @@
-package Data.Identifiers;
+package basic.data.identifiers;
 
 // The value can be modified && the name can be repeated
 public class Variable

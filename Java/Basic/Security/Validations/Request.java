@@ -1,4 +1,4 @@
-package Security.Validations;
+package basic.security.validations;
 
 import java.net.URI;
 import java.net.http.HttpRequest;

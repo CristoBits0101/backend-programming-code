@@ -1,4 +1,4 @@
-package Paradigms.POO.Class.Generic;
+package basic.poo.Class.generic;
 
 public class Class
 {

@@ -1,4 +1,4 @@
-package Flow.Loops;
+package basic.flow.loops;
 
 public class Foreach
 {

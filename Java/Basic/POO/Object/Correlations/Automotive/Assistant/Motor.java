@@ -1,4 +1,4 @@
-package Paradigms.POO.Object.Correlations.Automotive.Assistant;
+package basic.poo.object.correlations.automotive.assistant;
 
 public class Motor {
 

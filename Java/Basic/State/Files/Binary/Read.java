@@ -1,4 +1,4 @@
-package State.Files.Binary;
+package basic.state.files.binary;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;

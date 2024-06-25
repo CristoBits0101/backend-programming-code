@@ -1,4 +1,4 @@
-package Data.Identifiers;
+package basic.data.identifiers;
 
 public class Enum
 {

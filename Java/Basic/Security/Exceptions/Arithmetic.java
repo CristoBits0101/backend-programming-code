@@ -1,4 +1,4 @@
-package Security.Exceptions;
+package basic.security.exceptions;
 
 // Generally used to handle errors related to mathematical operations
 public class Arithmetic

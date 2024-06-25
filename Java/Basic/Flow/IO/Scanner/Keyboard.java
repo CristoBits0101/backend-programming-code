@@ -1,4 +1,4 @@
-package Flow.IO.Scanner;
+package basic.flow.io.scanner;
 
 import java.util.Scanner;
 

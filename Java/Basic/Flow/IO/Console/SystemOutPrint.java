@@ -1,4 +1,4 @@
-package Flow.IO.Console;
+package basic.flow.io.console;
 
 public class SystemOutPrint
 {

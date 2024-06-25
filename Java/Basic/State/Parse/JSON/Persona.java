@@ -1,3 +1,4 @@
+package basic.state.parse.json;
 //  Representa la estructura de datos.
 public class Persona 
 {

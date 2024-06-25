@@ -1,4 +1,4 @@
-package Paradigms.POO.Object.Instantiate.Class;
+package basic.poo.object.instantiate.Class;
 
 public class Parameters
 {
