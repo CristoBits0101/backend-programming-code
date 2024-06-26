@@ -1,21 +1,17 @@
 package data.comments;
 
+/**
+ * @author Cristo Suárez
+ */
 public class documentation {
 
-    // Comentario en línea.
-
-    /*
-     * Comentario en bloque.
-     */
-
     /**
-     * Comentario de documentación.
+     * 
+     * @param name
+     * @return
      */
-
-    /*
-        System.out.println("Comentario de multilíneas");
-        System.out.println("Comentario de multilíneas");
-        System.out.println("Comentario de multilíneas");
-    */
+    public static String name(String name) {
+        return name;
+    }
 
 }
