@@ -22,5 +22,5 @@ public class Concatenate {
     // String.format
     String concatenado4 = String.format("%d%d", num1, num2);
     System.out.println("Concatenado usando String.format: " + concatenado4); 
-    
+
 }
