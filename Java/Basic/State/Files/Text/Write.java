@@ -1,6 +1,5 @@
 package basic.state.files.text;
 
-public class Write
-{
+public class Write {
 
 }
