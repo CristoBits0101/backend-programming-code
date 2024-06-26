@@ -1,4 +1,4 @@
-package basic.data.structures.array;
+package basic.data.structures.list;
 
 /**
  *           Use : Implements a dynamic list using an underlying array.
@@ -14,20 +14,20 @@ public class ArrayList
 
         // Operation
         ArrayList.add("Car");                       //    Add element
-        ArrayList.get(0);                           //   Read element
-        ArrayList.set(0, "Motorcycle");             // Update element
-        ArrayList.remove(0);                  // Delete element
+        ArrayList.get(0);                       //   Read element
+        ArrayList.set(0, "Motorcycle"); // Update element
+        ArrayList.remove(0);                    // Delete element
 
-        ArrayList.clear();                          //  Empty the array
-        ArrayList.size();                           // return the size
+        ArrayList.clear();                            //  Empty the array
+        ArrayList.size();                             // return the size
 
         // Iteration
-        for (int i = 0; i < ArrayList.size(); i++)  // For
+        for (int i = 0; i < ArrayList.size(); i++)    // For
         {
             System.out.println(ArrayList.get(i));
         }
 
-        for ( String i : ArrayList)                 // Foreach
+        for ( String i : ArrayList)                   // Foreach
         {
             System.out.println(i);
         }
