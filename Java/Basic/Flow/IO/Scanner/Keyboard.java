@@ -2,23 +2,32 @@ package basic.flow.io.scanner;
 
 import java.util.Scanner;
 
-public class Keyboard
-{
-    public static void main(String[] args) 
-    {
-        // 1. Crear un objeto Scanner para leer desde el teclado
+public class Keyboard {
+    public static void main(String[] args) {
+
+        // 1. Declaramos las variables.
+        String nombre;
+        int age;
+
+        // 2. Crear un objeto Scanner para leer desde el teclado
         Scanner scanner = new Scanner(System.in);
 
-        // 2. Solicitar al usuario que ingrese un entero
-        System.out.print("Por favor, ingresa un número entero: ");
+        do {
 
-        // 3. Leer el entero ingresado por el usuario
-        int numeroEntero = scanner.nextInt();
+            // 3. Solicitar al usuario que ingrese un entero
+            System.out.print("Por favor, ingresa su nombre: ");
+            System.out.print("Por favor, ingresa su edad: ");
 
-        // 4. Mostrar el número ingresado
-        System.out.println("Has ingresado: " + numeroEntero);
+            // 4. Leer el nombre y el número entero del usuario
+            nombre = scanner.next();
+            age = scanner.nextInt();
+            
+        } while ();
 
-        // 5. Cerrar el objeto Scanner para liberar recursos
+        // 5. Mostrar los datos ingresado
+        System.out.println(nombre + " tiene " + age + " años.");
+
+        // 6. Cerrar el objeto Scanner para liberar recursos
         scanner.close();
     }
 }
