@@ -7,6 +7,14 @@
     - Trabaja con entradas.
     - Carga todo el contenido en memoria.
 
-# Scanner
-    - La mejor clase para solicitar datos a un usuario.
-    - La entradas pueden ser de un teclado o un fichero.
+# PrintStream:
+    - Orientado a bytes.
+    - Adecuado para imprimir datos binarios.
+    - No sincronizado.
+    - Utilizado para operaciones de salida de bytes, como archivos binarios.
+
+# PrintWriter:
+    - Orientado a caracteres.
+    - Adecuado para imprimir texto y datos manejados como caracteres.
+    - Sincronizado.
+    - Utilizado para operaciones de salida de caracteres, como archivos de texto y consola.
