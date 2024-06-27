@@ -20,7 +20,7 @@ public class PrintStream {
             file2.close();
 
         } catch (Exception e) {
-
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
