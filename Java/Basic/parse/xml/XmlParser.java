@@ -1,4 +1,4 @@
-package basic.state.parse.xml;
+package parse.xml;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;

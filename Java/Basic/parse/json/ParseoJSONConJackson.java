@@ -1,4 +1,4 @@
-package basic.state.parse.json;
+package parse.json;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 // Se encarga de la lógica principal de tu aplicación.

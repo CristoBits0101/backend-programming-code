@@ -1,4 +1,4 @@
-package basic.state.parse.json;
+package parse.json;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 // Encapsula la lógica de parseo del JSON, proporcionando una abstracción reutilizable.

@@ -1,14 +1,10 @@
-package basic.state.parse.xml;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
+package parse.json;
+//  Representa la estructura de datos.
 public class Persona 
 {
     private String nombre;
     private int edad;
 
-    @XmlElement
     public String getNombre() 
     {
         return nombre;
@@ -19,7 +15,6 @@ public class Persona
         this.nombre = nombre;
     }
 
-    @XmlElement
     public int getEdad() 
     {
         return edad;

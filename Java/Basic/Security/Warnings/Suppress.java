@@ -1,4 +1,4 @@
-package basic.security.Warnings;
+package security.warnings;
 
 public class Suppress {
 
