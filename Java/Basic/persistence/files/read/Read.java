@@ -1,38 +1,35 @@
-package persistence.files.file;
+package persistence.files.read;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class ReadInChunks {
+public class Read {
     public static void main(String[] args) {
 
         try {
 
             // Devuelve un array de bytes con el contenido de un fichero.
             InputStream fichero = new FileInputStream("C:\\Users\\reuda\\Downloads\\pruebas.txt");
-            
+
             /**
              * Para cuando el fichero es muy grande.
              * Consume mucha memoria y muchas operaciones de lectura en el disco.
              */
 
-            // El array de bytes esta limitado a 5 bytes.
-            byte datos[] = new byte[5];
-
-            // Lee de 5 en 5 bytes, lo devuelve en hexadecimal.
-            int dato = fichero.read(datos);
+            // Devuelve un Integer con el contenido de un fichero.
+            int datos = fichero.read();
 
             // read.() devuelve -1 cuando se llega al final del fichero.
-            while (dato != -1) {
+            while (datos != -1) {
                 System.out.println(datos);
-                dato = fichero.read(datos);
+                datos = fichero.read();
             }
 
-            while (dato != -1) {
-                System.out.println((char) dato);
-                dato = fichero.read(datos);
+            while (datos != -1) {
+                System.out.println((char) datos);
+                datos = fichero.read();
             }
 
             // Cerrar el fichero y liberar los recursos asociados.
