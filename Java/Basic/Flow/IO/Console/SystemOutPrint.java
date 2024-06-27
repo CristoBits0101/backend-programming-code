@@ -1,9 +1,7 @@
 package basic.flow.io.console;
 
-public class SystemOutPrint
-{
-    public static void main(String[] args)
-    {
+public class SystemOutPrint {
+    public static void main(String[] args) {
         // 1. Imprimir una cadena usando System.out.print
         System.out.print("Hola, esto es un ejemplo con System.out.print ");
 

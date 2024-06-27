@@ -1,9 +1,8 @@
-package basic.flow.io.console;
+package persistence.files.print;
 
-public class PrintStream
-{
-    public static void main(String[] args)
-    {
+public class PrintStream {
+    public static void main(String[] args) {
+
         // 1. Crear un objeto PrintStream asociado a la salida estándar (System.out)
         java.io.PrintStream printStream = System.out;
 
@@ -14,7 +13,8 @@ public class PrintStream
         int numero = 42;
         printStream.println("Número: " + numero);
 
-        // 4. Cerrar el objeto PrintStream (no es necesario en este caso, ya que System.out no se cierra)
+        // 4. Cerrar el objeto PrintStream.
         printStream.close();
+
     }
 }

@@ -1,5 +1,6 @@
 package basic.flow.io.scanner;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Keyboard {
@@ -18,11 +19,17 @@ public class Keyboard {
             System.out.print("Por favor, ingresa su nombre: ");
             System.out.print("Por favor, ingresa su edad: ");
 
-            // 4. Leer el nombre y el número entero del usuario
-            nombre = scanner.next();
-            age = scanner.nextInt();
-            
-        } while ();
+            try {
+
+                // 4. Leer el nombre y el número entero del usuario
+                nombre = scanner.next();
+                age = scanner.nextInt();
+
+            } catch (InputMismatchException e) {
+               System.out.println("Error: " + e.getMessage());
+            }
+
+        } while ( age < 0 || age > 150 && nombre.length() > 15 || nombre.length() < 2 );
 
         // 5. Mostrar los datos ingresado
         System.out.println(nombre + " tiene " + age + " años.");
