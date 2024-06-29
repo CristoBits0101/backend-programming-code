@@ -13,26 +13,26 @@ public class HigherOrderFunction {
     private static ArrayList<String> names = new ArrayList<>();
 
     public static void main(String[] args) {
-        System.out.println(uppercase.apply("Cristo"));                       // Ejemplo 1
-        System.out.println(adder.apply(5));                                  // Ejemplo 2
+        System.out.println(uppercase.apply("Cristo"));                       // Ejemplo 01
+        System.out.println(adder.apply(5));                                  // Ejemplo 02
 
-        saludar(uppercase, "Cristo");                                     // Ejemplo 3
+        saludar(uppercase, "Cristo");                                     // Ejemplo 03
 
         names.add("Cristo");
         names.add("Adara");
 
-        names.stream().forEach(System.out::println);                           // Ejemplo 4
-        names.stream().forEach(x ->  System.out.println(x));                   // Ejemplo 5
-        names.stream().map(x -> x.toUpperCase()).forEach(System.out::println); // Ejemplo 6
+        names.stream().forEach(System.out::println);                           // Ejemplo 04
+        names.stream().forEach(x ->  System.out.println(x));                   // Ejemplo 05
+        names.stream().map(x -> x.toUpperCase()).forEach(System.out::println); // Ejemplo 06
 
         Stream <String> valores = names.stream().map(x -> x.toUpperCase());
-        valores.forEach(System.out::println);                                  // Ejemplo 7
+        valores.forEach(System.out::println);                                  // Ejemplo 07
 
         names
             .stream()
             .map(x -> x.toUpperCase())
             .filter(x -> x.startsWith("C"))
-            .forEach(System.out::println);                                     // Ejemplo 8
+            .forEach(System.out::println);                                     // Ejemplo 08
 
         int []numeros = {1, 2, 3, 4, 5, 6};
         var streamNumeros = Arrays.stream(numeros);
