@@ -16,3 +16,8 @@
     - PUT para actualizar datos enviándolos todos otra vez al servidor.
     - PACTH para actualizar datos enviando solo los que han cambiado al servidor.
     - DELETE para borrar datos del servidor.
+
+# Recursividad
+    - Función recursiva se usa para la limpieza del código y para árboles, pero es lenta porque se copia en memoria los frame
+    - Función iterativa es la más rápida, pero es más difícil de leer
+    - Función funcional es la más lenta, pero la más corta de implementar y refactorizar
