@@ -36,7 +36,7 @@ public class HigherOrderFunction {
 
         int []numeros = {1, 2, 3, 4, 5, 6};
         var streamNumeros = Arrays.stream(numeros);
-        streamNumeros.forEach(System.out::println);                            // Ejemplo 9 
+        streamNumeros.forEach(System.out::println);                            // Ejemplo 09 
 
         var resultado1 = streamNumeros                                         // Ejemplo 10
             .filter(x -> x % 2 == 0)
