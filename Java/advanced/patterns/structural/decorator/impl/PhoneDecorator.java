@@ -1,6 +1,6 @@
 package advanced.patterns.structural.decorator.impl;
 
-import advanced.patterns.structural.decorator.service.PhoneService;
+import advanced.patterns.structural.decorator.services.PhoneService;
 
 public class PhoneDecorator implements PhoneService {
 

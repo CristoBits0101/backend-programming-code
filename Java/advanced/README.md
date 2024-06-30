@@ -27,3 +27,8 @@
     - Factory: Siempre parte de una clase abstracta o interfaz, devolviendo una instancia según el parámetro de entrada.
     - Builder: Usa la programación fluida como en la funcional.
     - Prototype: Crear un objeto a partir de otro incluye su estado actual.
+
+# Patrones structurales
+    - Decorator: Dispara una reacción en cadena anidada entre clases.
+    - Adapter: Es para trabajar con código heredado de viejas versiones a nuevas.
+    - 
