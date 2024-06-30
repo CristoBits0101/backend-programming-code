@@ -19,4 +19,8 @@ public class PrecioFactory {
         }
     }
 
+    public double getPrecio() {
+        return this.precio.getPrecio();
+    }
+
 }
