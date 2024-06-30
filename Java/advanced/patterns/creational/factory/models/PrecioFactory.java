@@ -4,7 +4,7 @@ import advanced.patterns.creational.factory.services.Precio;
 
 public class PrecioFactory {
 
-    Precio precio;                                              // La interface es un atributo.
+    public Precio precio;                                       // La interface es un atributo.
 
     private PrecioFactory() {                                   // Los constructores vacíos son privados.
     }
