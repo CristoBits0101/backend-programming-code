@@ -24,4 +24,4 @@
 
 # Patrones creacionales
     - Singleton: Solo puede haber una instancia de una clase en la memoria
-    - 
+    - Factory: Siempre parte de una clase abstracta o de una interface
