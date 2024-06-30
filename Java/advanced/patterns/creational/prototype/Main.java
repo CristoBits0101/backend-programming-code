@@ -18,11 +18,15 @@ public class Main {
 
         //
         try {
+
             Coche clon = coche1.clonar();
+
             clon.puertas = 3;
+
             System.out.println(clon.marca);
             System.out.println(clon.modelo);
             System.out.println(clon.puertas);
+            
         } catch (CloneNotSupportedException e) {
             System.out.println("No se puede clonar el objeto: " + e.getMessage());
         }
