@@ -21,3 +21,7 @@
     - Función recursiva se usa para la limpieza del código y para árboles, pero es lenta porque se copia en memoria los frame
     - Función iterativa es la más rápida, pero es más difícil de leer
     - Función funcional es la más lenta, pero la más corta de implementar y refactorizar
+
+# Patrones creacionales
+    - Singleton: Solo puede haber una instancia de una clase en la memoria
+    - 
