@@ -1,4 +1,8 @@
-package advanced.patterns.behavioral.strategy;
+package advanced.patterns.behavioral.strategy.rest;
+
+import advanced.patterns.behavioral.strategy.beans.Usuario;
+import advanced.patterns.behavioral.strategy.beans.Usuarios;
+import advanced.patterns.behavioral.strategy.impl.EstrategiaCreacionSimple;
 
 public class Main {
     public static void main(String[] args) {

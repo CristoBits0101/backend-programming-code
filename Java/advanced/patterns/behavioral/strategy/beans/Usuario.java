@@ -1,4 +1,4 @@
-package advanced.patterns.behavioral.strategy;
+package advanced.patterns.behavioral.strategy.beans;
 
 public class Usuario {
     private String nombre;

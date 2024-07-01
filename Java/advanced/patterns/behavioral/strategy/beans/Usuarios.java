@@ -1,6 +1,8 @@
-package advanced.patterns.behavioral.strategy;
+package advanced.patterns.behavioral.strategy.beans;
 
 import java.util.List;
+
+import advanced.patterns.behavioral.strategy.service.EstrategiaCreacion;
 
 public class Usuarios {
     private EstrategiaCreacion estrategia;
