@@ -29,6 +29,8 @@
     - Prototype: Crear un objeto a partir de otro incluye su estado actual.
 
 # Patrones structurales
-    - Decorator: Dispara una reacción en cadena anidada entre clases.
-    - Adapter: Es para trabajar con código heredado de viejas versiones a nuevas.
-    - Facades: Esconde la lógica en una clase intermedia que contiene funciones.
+    - Iterator: Recorrer datos de una clase sin saber como están almacenados.
+    - Mediator: 
+    - Observer: 
+    - State: 
+    - Strategy: 
