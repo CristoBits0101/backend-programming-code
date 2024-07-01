@@ -31,4 +31,4 @@
 # Patrones structurales
     - Decorator: Dispara una reacción en cadena anidada entre clases.
     - Adapter: Es para trabajar con código heredado de viejas versiones a nuevas.
-    - 
+    - Facades: Esconde la lógica en una clase intermedia que contiene funciones.
