@@ -1,7 +1,7 @@
 package advanced.patterns.structural.decorator.beans;
 
 import advanced.patterns.structural.decorator.impl.PhoneDecorator;
-import advanced.patterns.structural.decorator.services.PhoneService;
+import advanced.patterns.structural.decorator.service.PhoneService;
 
 public class PhoneNextGen extends PhoneDecorator {
 

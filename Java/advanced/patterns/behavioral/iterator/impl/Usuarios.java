@@ -3,7 +3,7 @@ package advanced.patterns.behavioral.iterator.impl;
 import java.util.ArrayList;
 
 import advanced.patterns.behavioral.iterator.beans.Usuario;
-import advanced.patterns.behavioral.iterator.services.UsuarioIterator;
+import advanced.patterns.behavioral.iterator.service.UsuarioIterator;
 
 // Si se devuelve un usuario en la interfaz hay una clase usuarios extra. 
 public class Usuarios implements UsuarioIterator {

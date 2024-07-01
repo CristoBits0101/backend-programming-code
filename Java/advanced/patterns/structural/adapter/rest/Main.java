@@ -3,7 +3,7 @@ package advanced.patterns.structural.adapter.rest;
 import advanced.patterns.structural.adapter.impl.Horno;
 import advanced.patterns.structural.adapter.impl.Lampara;
 import advanced.patterns.structural.adapter.impl.PowerAdapter;
-import advanced.patterns.structural.adapter.services.EnchufableService;
+import advanced.patterns.structural.adapter.service.EnchufableService;
 
 public class Main {
 

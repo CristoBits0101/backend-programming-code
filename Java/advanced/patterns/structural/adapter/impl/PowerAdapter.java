@@ -1,7 +1,7 @@
 package advanced.patterns.structural.adapter.impl;
 
 import advanced.patterns.structural.adapter.beans.EnglishLightBulb;
-import advanced.patterns.structural.adapter.services.EnchufableService;
+import advanced.patterns.structural.adapter.service.EnchufableService;
 
 // Se implementa la interfaz sobre la clase a adaptar.
 public class PowerAdapter implements EnchufableService {

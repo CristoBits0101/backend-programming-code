@@ -31,6 +31,6 @@
 # Patrones structurales
     - Iterator: Recorrer datos de una clase sin saber como están almacenados.
     - Mediator: 
-    - Observer: 
+    - Observer: Orientado a eventos, donde uno habla y muchos escuchan.
     - State: 
     - Strategy: 

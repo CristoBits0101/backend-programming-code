@@ -1,6 +1,6 @@
 package advanced.patterns.structural.adapter.impl;
 
-import advanced.patterns.structural.adapter.services.EnchufableService;
+import advanced.patterns.structural.adapter.service.EnchufableService;
 
 public class Horno implements EnchufableService {
 
